@@ -1,4 +1,4 @@
-FROM nixos/nix:2.20.0
+FROM nixos/nix:latest
 MAINTAINER Robin Hack <hack.robin@gmail.com>
 
 WORKDIR /build
