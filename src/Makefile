@@ -13,6 +13,10 @@ AR=ar
 RANLIB=ranlib
 
 all:
+	@echo " "
+	@echo "========================="
+	@echo " "      
+
 	@echo "Getting the headers from the kernel"
 	@$(MAKE) kernel-env > /dev/null 2>&1
 	@echo "Done getting the headers"
@@ -41,6 +45,26 @@ all:
 	@$(MAKE) busybox > /dev/null 2>&1
 	@echo "Done compiling busybox"
 
+	@echo " "
+	@echo "========================="
+	@echo " "       
+
+	@echo "Compiling kernel"
+	@$(MAKE) kernel > /dev/null 2>&1
+	@echo "Done compiling kernel"
+
+	@echo " "
+	@echo "========================="
+	@echo " "       
+
+	@echo "Installing kernel to root"
+	@$(MAKE) inst-kernel > /dev/null 2>&1
+	@echo "Done installing kernel"
+
+	@echo " "
+	@echo "========================="
+	@echo " "       
+
 kernel-env:
 	cd 386linux && $(MAKE) headers_install ARCH=i386 INSTALL_HDR_PATH=../cross
 
@@ -59,6 +83,13 @@ busybox-clean:
 
 musl-cross:
 	tar xvf tars/i486-linux-musl-cross.tar.xz
+
+kernel:
+	cd 386linux && $(MAKE) ARCH=i386 bzImage
+
+inst-kernel:
+	mkdir root/boot
+	cp 386linux/arch/x86/boot/bzImage root/boot/bzImage
 
 clean:
 	cd 386linux/ && $(MAKE) clean
