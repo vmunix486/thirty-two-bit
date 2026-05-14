@@ -21,12 +21,12 @@ Just `cd` into the `src` directory and type `make`. It will compile all the cros
 
 # TODO
 
- - Fix linking error for busybox
  - Add support for making into disk image
    - Add Bootloader support (Probably lilo, maybe GRUB)
  - Add bash
- - Add custom neofetch version
+ - Add custom neofetch, pfetch, and screenfetch version
  - Add native C compiler (maybe something like chibicc or TCC)
+  - Add binutils
  - Add Nano-X (I AM <ins>**NOT**</ins> DOING X11😭)
  - Add support for making floppinux target
  - Add ncurses
@@ -35,7 +35,7 @@ Just `cd` into the `src` directory and type `make`. It will compile all the cros
  - Add links
    - Add directfb as well for graphics and gpm for mouse
  - Add Rogue (I don't like nethack)
- - Add tiny386, smolnes, and 8086tiny because why the heck not
+ - Add tiny386 and 8086tiny because why the heck not
  - Add package manager for all this
 
 # Notes
