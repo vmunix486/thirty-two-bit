@@ -18,7 +18,7 @@ I found gray386linux a long time ago, but I couldn't mess with it because it kep
 # Compiling
 
 Just `cd` into the `src` directory and type `make`. It will compile all the cross-compile dependancies into `cross`, while the actual i386 binaries will be in `root`.
-NOTE: This is not how this works yet.
+**NOTE**: This is not how this works yet.
 
 # TODO
 
@@ -29,11 +29,17 @@ NOTE: This is not how this works yet.
  - Add bash
  - Add custom neofetch version
  - Add native C compiler (maybe something like chibicc or TCC)
- - Add Nano-X (I AM <ins>**NOT**</ins> DOING X11)
+ - Add Nano-X (I AM <ins>**NOT**</ins> DOING X11😭)
  - Add support for making floppinux target
  - Add ncurses
  - Add ALSA
  - Add lighttpd
  - Add links
    - Add directfb as well for graphics and gpm for mouse
+ - Add Rogue (I don't like nethack)
+ - Add tiny386, smolnes, and 8086tiny because why the heck not
  - Add package manager for all this
+
+# Notes
+
+Do not expect this to be a full-out daily drivenment linux distro for your 386. This is basically a toy that you can play around with. Once I get this working, you should actually go work on Fiwix, because it is a Microkernel, and needs a lot more help working on it, along with it being a lot better to use than old linux.
