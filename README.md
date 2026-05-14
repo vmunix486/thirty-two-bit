@@ -23,7 +23,6 @@ Just `cd` into the `src` directory and type `make`. It will compile all the cros
 # TODO
 
  - Fix linking error for busybox
- - Add `clean` and `gitclean` to Makefile (gitclean is basically like depclean, but it doesn't remove every single thing.)
  - Add support for making into disk image
    - Add Bootloader support (Probably lilo, maybe GRUB)
  - Add bash
