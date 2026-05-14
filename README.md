@@ -18,7 +18,6 @@ I found gray386linux a long time ago, but I couldn't mess with it because it kep
 # Compiling
 
 Just `cd` into the `src` directory and type `make`. It will compile all the cross-compile dependancies into `cross`, while the actual i386 binaries will be in `root`.
-**NOTE**: This is not how this works yet.
 
 # TODO
 
