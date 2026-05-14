@@ -49,7 +49,7 @@ static const char bbconfig_config[] ALIGN1 =
 "# CONFIG_FEATURE_SHARED_BUSYBOX is not set\n"
 "CONFIG_CROSS_COMPILER_PREFIX=\"../cross/bin/musl-\"\n"
 "CONFIG_SYSROOT=\"../cross/\"\n"
-"CONFIG_EXTRA_CFLAGS=\"-m32 -march=i386 -mtune=i386 -fcf-protection=none -fno-stack-protector  -fomit-frame-pointer -fno-pic -mno-mmx -mno-sse -Wa,-mtune=generic32 -Os -I../cross/include/\"\n"
+"CONFIG_EXTRA_CFLAGS=\"-m32 -march=i386 -mtune=i386 -fcf-protection=none -fno-stack-protector  -fomit-frame-pointer -fno-pic -mno-mmx -mno-sse -Wa,-mtune=generic32 -I../cross/include/ -fno-pie\"\n"
 "CONFIG_EXTRA_LDFLAGS=\"-m32\"\n"
 "CONFIG_EXTRA_LDLIBS=\"\"\n"
 "# CONFIG_USE_PORTABLE_CODE is not set\n"

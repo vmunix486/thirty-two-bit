@@ -289,14 +289,14 @@ MAKEFLAGS += -rR
 # Make variables (CC, etc...)
 
 AS		= $(CROSS_COMPILE)as
-CC		= $(CROSS_COMPILE)gcc
+CC		= ../i486-linux-musl-cross/bin/i486-linux-musl-gcc
 LD		= $(CC) -nostdlib
 CPP		= $(CC) -E
-AR		= $(CROSS_COMPILE)ar
-NM		= $(CROSS_COMPILE)nm
-STRIP		= $(CROSS_COMPILE)strip
-OBJCOPY		= $(CROSS_COMPILE)objcopy
-OBJDUMP		= $(CROSS_COMPILE)objdump
+AR		= ../i486-linux-musl-cross/bin/i486-linux-musl-ar
+NM		= ../i486-linux-musl-cross/bin/i486-linux-musl-nm
+STRIP		= ../i486-linux-musl-cross/bin/i486-linux-musl-strip
+OBJCOPY		= ../i486-linux-musl-cross/bin/i486-linux-musl-objcopy
+OBJDUMP		= ../i486-linux-musl-cross/bin/i486-linux-musl-objdump
 PKG_CONFIG	?= $(CROSS_COMPILE)pkg-config
 AWK		= awk
 GENKSYMS	= scripts/genksyms/genksyms
@@ -316,12 +316,12 @@ AFLAGS_KERNEL	=
 
 # Use LINUXINCLUDE when you must reference the include/ directory.
 # Needed to be compatible with the O= option
-CFLAGS		:= $(CFLAGS)
+CFLAGS		:= $(CFLAGS) -w
 # Added only to final link stage of busybox binary
 CFLAGS_busybox	:= $(CFLAGS_busybox)
-CPPFLAGS	:= $(CPPFLAGS)
+CPPFLAGS	:= $(CPPFLAGS) 
 AFLAGS		:= $(AFLAGS)
-LDFLAGS		:= $(LDFLAGS) -m32
+LDFLAGS		:= $(LDFLAGS) -no-pie
 LDLIBS		:=
 
 # Read KERNELRELEASE from .kernelrelease (if it exists)

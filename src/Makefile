@@ -1,7 +1,7 @@
 # Written by vmunix. If something goes wrong, yell at me.
 
 # C flags for compiling musl
-CFLAGS=-m32 -march=i386 -mtune=i386 -fcf-protection=none -fno-stack-protector -fomit-frame-pointer -mno-mmx -mno-sse -fno-pic -Os
+CFLAGS=-m32 -march=i386 -mtune=i386 -fcf-protection=none -fno-stack-protector -fomit-frame-pointer -mno-mmx -mno-sse -fno-pic -O3
 
 # C compiler for compiling musl
 CC=cc
@@ -17,10 +17,26 @@ all:
 	@$(MAKE) kernel-env > /dev/null 2>&1
 	@echo "Done getting the headers"
 	
+	@echo " "
+	@echo "========================="
+	@echo " "	
+
 	@echo "Compiling musl libc"
 	@$(MAKE) musl > /dev/null 2>&1
 	@echo "Done compiling musl libc"
 	
+	@echo " "
+	@echo "========================="
+	@echo " "
+	
+	@echo "Untarring musl cross compiler"
+	@$(MAKE) musl-cross > /dev/null 2>&1
+	@echo "Done untarring musl cross compiler"
+
+	@echo " "
+	@echo "========================="
+	@echo " "
+
 	@echo "Compiling busybox"
 	@$(MAKE) busybox > /dev/null 2>&1
 	@echo "Done compiling busybox"
@@ -28,7 +44,7 @@ all:
 kernel-env:
 	cd 386linux && $(MAKE) headers_install ARCH=i386 INSTALL_HDR_PATH=../cross
 
-musl:
+musl:	
 	cd musl-1.2.5 && CC=$(CC) CFLAGS='$(CFLAGS) -I../cross/include' ./configure --target=i386 --prefix='../cross'
 	cd musl-1.2.5 && AR=$(AR) RANLIB=$(RANLIB) $(MAKE)
 	@echo "If it just failed to build, then you might have to copy the system ar to i386-ar, and the same with ranlib."
@@ -36,9 +52,16 @@ musl:
 
 busybox:
 	cd busybox-1.38.0 && $(MAKE)
+	cd busybox-1.38.0 && $(MAKE) install
+
+busybox-clean:
+	cd busybox-1.38.0 && $(MAKE) clean
+
+musl-cross:
+	tar xvf tars/i486-linux-musl-cross.tar.xz
 
 clean:
 	cd 386linux/ && $(MAKE) clean
 	cd musl-1.2.5/ && $(MAKE) clean
 	cd busybox-1.38.0/ && $(MAKE) clean
-	rm -rv cross/ root/
+	rm -rv cross/ root/ i486-linux-musl-cross/
