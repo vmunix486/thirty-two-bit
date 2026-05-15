@@ -21,8 +21,6 @@ Just `cd` into the `src` directory and type `make`. It will compile all the cros
 
 # TODO
 
- - Make disk image tutorial support multi-user booting
- - Add bash
  - Add custom neofetch, pfetch, and screenfetch version
  - Add native C compiler (maybe something like chibicc or TCC)
   - Add binutils
