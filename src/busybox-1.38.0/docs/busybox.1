@@ -157,7 +157,7 @@ Currently available applets include:
 \&\f(CW\*(C`route\*(C'\fR, \f(CW\*(C`sed\*(C'\fR, \f(CW\*(C`seedrng\*(C'\fR, \f(CW\*(C`seq\*(C'\fR, \f(CW\*(C`sh\*(C'\fR, \f(CW\*(C`sha384sum\*(C'\fR, \f(CW\*(C`sleep\*(C'\fR, \f(CW\*(C`sort\*(C'\fR, \f(CW\*(C`ssl_server\*(C'\fR,
 \&\f(CW\*(C`stat\*(C'\fR, \f(CW\*(C`stty\*(C'\fR, \f(CW\*(C`su\*(C'\fR, \f(CW\*(C`sync\*(C'\fR, \f(CW\*(C`syslogd\*(C'\fR, \f(CW\*(C`tail\*(C'\fR, \f(CW\*(C`tee\*(C'\fR, \f(CW\*(C`telnet\*(C'\fR, \f(CW\*(C`test\*(C'\fR, \f(CW\*(C`timeout\*(C'\fR,
 \&\f(CW\*(C`top\*(C'\fR, \f(CW\*(C`touch\*(C'\fR, \f(CW\*(C`tr\*(C'\fR, \f(CW\*(C`tree\*(C'\fR, \f(CW\*(C`tsort\*(C'\fR, \f(CW\*(C`udhcpc\*(C'\fR, \f(CW\*(C`uevent\*(C'\fR, \f(CW\*(C`umount\*(C'\fR, \f(CW\*(C`uname\*(C'\fR,
-\&\f(CW\*(C`unix2dos\*(C'\fR, \f(CW\*(C`uuidgen\*(C'\fR, \f(CW\*(C`vi\*(C'\fR, \f(CW\*(C`vmstat\*(C'\fR, \f(CW\*(C`watch\*(C'\fR, \f(CW\*(C`wc\*(C'\fR, \f(CW\*(C`wget\*(C'\fR, \f(CW\*(C`whoami\*(C'\fR
+\&\f(CW\*(C`unix2dos\*(C'\fR, \f(CW\*(C`uuidgen\*(C'\fR, \f(CW\*(C`vi\*(C'\fR, \f(CW\*(C`vmstat\*(C'\fR, \f(CW\*(C`watch\*(C'\fR, \f(CW\*(C`wc\*(C'\fR, \f(CW\*(C`wget\*(C'\fR, \f(CW\*(C`which\*(C'\fR, \f(CW\*(C`whoami\*(C'\fR
 .SH "COMMAND DESCRIPTIONS"
 .IX Header "COMMAND DESCRIPTIONS"
 .SS addgroup
@@ -1904,6 +1904,15 @@ Retrieve files via HTTP or FTP
 \&        \-o LOGFILE      Log messages to FILE
 \&        \-U STR          Use STR for User\-Agent header
 \&        \-Y on/off       Use proxy
+.Ve
+.SS which
+.IX Subsection "which"
+which [\-a] COMMAND...
+.PP
+Locate COMMAND
+.PP
+.Vb 1
+\&        \-a      Show all matches
 .Ve
 .SS whoami
 .IX Subsection "whoami"

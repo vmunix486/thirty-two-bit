@@ -137,9 +137,12 @@ mknod:
 perms:
 	sudo chmod +x root/etc/inittab
 	sudo chmod +x root/etc/init.d/rc
+	sudo chmod +x root/usr/bin/slirp-netstart
+	
 
 clean:
 	cd 386linux/ && $(MAKE) clean
 	cd musl-1.2.5/ && $(MAKE) clean
 	cd busybox-1.38.0/ && $(MAKE) clean
-	sudo rm -rfv cross/ root/ i486-linux-musl-cross/
+	sudo rm -rfv cross/ root/ i486-linux-musl-cross/ extapps/*
+	

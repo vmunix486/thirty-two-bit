@@ -88,7 +88,8 @@ COMMANDS
     reboot, reset, rm, rmdir, route, sed, seedrng, seq, sh, sha384sum,
     sleep, sort, ssl_server, stat, stty, su, sync, syslogd, tail, tee,
     telnet, test, timeout, top, touch, tr, tree, tsort, udhcpc, uevent,
-    umount, uname, unix2dos, uuidgen, vi, vmstat, watch, wc, wget, whoami
+    umount, uname, unix2dos, uuidgen, vi, vmstat, watch, wc, wget, which,
+    whoami
 
 COMMAND DESCRIPTIONS
   addgroup
@@ -1621,6 +1622,13 @@ COMMAND DESCRIPTIONS
             -o LOGFILE      Log messages to FILE
             -U STR          Use STR for User-Agent header
             -Y on/off       Use proxy
+
+  which
+    which [-a] COMMAND...
+
+    Locate COMMAND
+
+            -a      Show all matches
 
   whoami
     whoami

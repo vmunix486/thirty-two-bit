@@ -2,7 +2,7 @@
  * Automatically generated C config: don't edit
  * Busybox version: 1.38.0
  */
-#define AUTOCONF_TIMESTAMP "2026-05-14 22:58:46 EDT"
+#define AUTOCONF_TIMESTAMP "2026-05-15 12:14:26 EDT"
 
 #define CONFIG_HAVE_DOT_CONFIG 1
 #define ENABLE_HAVE_DOT_CONFIG 1
@@ -2036,10 +2036,14 @@
 #define ENABLE_FEATURE_START_STOP_DAEMON_FANCY 0
 #define IF_FEATURE_START_STOP_DAEMON_FANCY(...)
 #define IF_NOT_FEATURE_START_STOP_DAEMON_FANCY(...) __VA_ARGS__
-#undef CONFIG_WHICH
-#define ENABLE_WHICH 0
-#define IF_WHICH(...)
-#define IF_NOT_WHICH(...) __VA_ARGS__
+#define CONFIG_WHICH 1
+#define ENABLE_WHICH 1
+#ifdef MAKE_SUID
+# define IF_WHICH(...) __VA_ARGS__ "CONFIG_WHICH"
+#else
+# define IF_WHICH(...) __VA_ARGS__
+#endif
+#define IF_NOT_WHICH(...)
 
 /*
  * klibc-utils

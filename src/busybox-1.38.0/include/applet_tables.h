@@ -1,6 +1,6 @@
 /* This is a generated file, don't edit */
 
-#define NUM_APPLETS 128
+#define NUM_APPLETS 129
 #define KNOWN_APPNAME_OFFSETS 8
 
 const uint16_t applet_nameofs[] ALIGN2 = {
@@ -141,6 +141,7 @@ const char applet_names[] ALIGN1 = ""
 "watch" "\0"
 "wc" "\0"
 "wget" "\0"
+"which" "\0"
 "whoami" "\0"
 ;
 
@@ -268,7 +269,8 @@ const char applet_names[] ALIGN1 = ""
 #define APPLET_NO_watch 124
 #define APPLET_NO_wc 125
 #define APPLET_NO_wget 126
-#define APPLET_NO_whoami 127
+#define APPLET_NO_which 127
+#define APPLET_NO_whoami 128
 
 #ifndef SKIP_applet_main
 int (*const applet_main[])(int argc, char **argv) = {
@@ -399,6 +401,7 @@ vmstat_main,
 watch_main,
 wc_main,
 wget_main,
+which_main,
 whoami_main,
 };
 #endif

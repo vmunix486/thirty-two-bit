@@ -354,7 +354,7 @@ static const char bbconfig_config[] ALIGN1 =
 "# CONFIG_START_STOP_DAEMON is not set\n"
 "# CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS is not set\n"
 "# CONFIG_FEATURE_START_STOP_DAEMON_FANCY is not set\n"
-"# CONFIG_WHICH is not set\n"
+"CONFIG_WHICH=y\n"
 "# CONFIG_MINIPS is not set\n"
 "# CONFIG_NUKE is not set\n"
 "# CONFIG_RESUME is not set\n"

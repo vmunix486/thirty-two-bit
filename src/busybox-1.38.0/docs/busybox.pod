@@ -94,7 +94,7 @@ L<C<ps>|/"ps">, L<C<pstree>|/"pstree">, L<C<pwd>|/"pwd">, L<C<readlink>|/"readli
 L<C<route>|/"route">, L<C<sed>|/"sed">, L<C<seedrng>|/"seedrng">, L<C<seq>|/"seq">, L<C<sh>|/"sh">, L<C<sha384sum>|/"sha384sum">, L<C<sleep>|/"sleep">, L<C<sort>|/"sort">, L<C<ssl_server>|/"ssl_server">,
 L<C<stat>|/"stat">, L<C<stty>|/"stty">, L<C<su>|/"su">, L<C<sync>|/"sync">, L<C<syslogd>|/"syslogd">, L<C<tail>|/"tail">, L<C<tee>|/"tee">, L<C<telnet>|/"telnet">, C<test>, L<C<timeout>|/"timeout">,
 L<C<top>|/"top">, L<C<touch>|/"touch">, L<C<tr>|/"tr">, C<tree>, L<C<tsort>|/"tsort">, L<C<udhcpc>|/"udhcpc">, L<C<uevent>|/"uevent">, L<C<umount>|/"umount">, L<C<uname>|/"uname">,
-L<C<unix2dos>|/"unix2dos">, L<C<uuidgen>|/"uuidgen">, L<C<vi>|/"vi">, L<C<vmstat>|/"vmstat">, L<C<watch>|/"watch">, L<C<wc>|/"wc">, L<C<wget>|/"wget">, L<C<whoami>|/"whoami">
+L<C<unix2dos>|/"unix2dos">, L<C<uuidgen>|/"uuidgen">, L<C<vi>|/"vi">, L<C<vmstat>|/"vmstat">, L<C<watch>|/"watch">, L<C<wc>|/"wc">, L<C<wget>|/"wget">, L<C<which>|/"which">, L<C<whoami>|/"whoami">
 
 =head1 COMMAND DESCRIPTIONS
 
@@ -1772,6 +1772,14 @@ Retrieve files via HTTP or FTP
 	-o LOGFILE	Log messages to FILE
 	-U STR		Use STR for User-Agent header
 	-Y on/off	Use proxy
+
+=head2 which
+
+which [-a] COMMAND...
+
+Locate COMMAND
+
+	-a	Show all matches
 
 =head2 whoami
 
