@@ -21,8 +21,6 @@ Just `cd` into the `src` directory and type `make`. It will compile all the cros
 
 # TODO
 
- - Add support for making into disk image
-   - Add Bootloader support (Probably lilo, maybe GRUB)
  - Add bash
  - Add custom neofetch, pfetch, and screenfetch version
  - Add native C compiler (maybe something like chibicc or TCC)
