@@ -85,6 +85,19 @@ all:
 	@$(MAKE) mknod
 	@echo "Done making nods"
 
+	@echo " "
+	@echo "========================"
+	@echo " "
+
+	@echo "Setting permissions..."
+	@$(MAKE) perms > /dev/null 2>&1
+	@echo "Done setting permissions"
+
+	@echo " "
+	@echo "======================="
+	@echo " "
+	
+
 kernel-env:
 	cd 386linux && $(MAKE) headers_install ARCH=i386 INSTALL_HDR_PATH=../cross
 
@@ -122,18 +135,12 @@ mknod:
 	sudo mknod root/dev/console c 5 1
 	sudo mknod root/dev/null c 1 3
 
-#mkimage:
-#	dd if=/dev/zero of=root.img bs=1M count=10
-
-#format:
-#	sudo mkfs.ext4 root.img
-
-#grub-inst:
-#	sudo losetup -Pf root.img
-#	sudo grub2-install --target=i386-pc --boot-directory=root/boot /dev/loop0
+perms:
+	sudo chmod +x root/etc/inittab
+	sudo chmod +x root/etc/init.d/rc
 
 clean:
 	cd 386linux/ && $(MAKE) clean
 	cd musl-1.2.5/ && $(MAKE) clean
 	cd busybox-1.38.0/ && $(MAKE) clean
-	rm -rv cross/ root/ i486-linux-musl-cross/ #root.img
+	sudo rm -rfv cross/ root/ i486-linux-musl-cross/
