@@ -1,0 +1,2 @@
+# generic fstab to stop mount from yelling at me
+/dev/sda1	/	ext2	defaults

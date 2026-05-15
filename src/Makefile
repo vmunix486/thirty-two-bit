@@ -126,10 +126,9 @@ inst-kernel:
 
 copy-etc:
 	cp -rv ttb/* root/
-	cp -rv gray386/* root/
 
 mkdirs:
-	mkdir -pv root/dev root/proc root/sys root/tmp root/home
+	mkdir -pv root/dev root/proc root/sys root/tmp root/home root/root
 
 mknod:
 	sudo mknod root/dev/console c 5 1

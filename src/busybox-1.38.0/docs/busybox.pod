@@ -81,20 +81,47 @@ been enabled, more detailed usage information will also be available.
 
 Currently available applets include:
 
-C<[>, C<[[>, L<C<arp>|/"arp">, L<C<ash>|/"ash">, L<C<awk>|/"awk">, L<C<bash>|/"bash">, L<C<blkid>|/"blkid">, L<C<cat>|/"cat">, L<C<chgrp>|/"chgrp">, L<C<chmod>|/"chmod">, L<C<chown>|/"chown">, L<C<clear>|/"clear">,
-L<C<comm>|/"comm">, L<C<cp>|/"cp">, L<C<crc32>|/"crc32">, L<C<cttyhack>|/"cttyhack">, L<C<cut>|/"cut">, L<C<date>|/"date">, L<C<dd>|/"dd">, L<C<df>|/"df">, L<C<dmesg>|/"dmesg">, L<C<dos2unix>|/"dos2unix">, L<C<du>|/"du">,
-L<C<echo>|/"echo">, L<C<env>|/"env">, C<false>, L<C<fdisk>|/"fdisk">, L<C<find>|/"find">, L<C<free>|/"free">, L<C<ftpget>|/"ftpget">, L<C<getfattr>|/"getfattr">, L<C<grep>|/"grep">, L<C<halt>|/"halt">,
-L<C<hdparm>|/"hdparm">, L<C<head>|/"head">, L<C<hexedit>|/"hexedit">, L<C<hostname>|/"hostname">, L<C<httpd>|/"httpd">, L<C<ifconfig>|/"ifconfig">, L<C<init>|/"init">, L<C<ip>|/"ip">, L<C<ipaddr>|/"ipaddr">,
-L<C<iplink>|/"iplink">, L<C<iproute>|/"iproute">, L<C<kill>|/"kill">, L<C<less>|/"less">, L<C<ln>|/"ln">, L<C<losetup>|/"losetup">, L<C<ls>|/"ls">, L<C<lsblk>|/"lsblk">, L<C<makedevs>|/"makedevs">,
-L<C<mkdir>|/"mkdir">, L<C<mkdosfs>|/"mkdosfs">, L<C<mkfifo>|/"mkfifo">, L<C<mkfs.vfat>|/"mkfs.vfat">, L<C<mknod>|/"mknod">, L<C<mkswap>|/"mkswap">, L<C<mktemp>|/"mktemp">, L<C<mount>|/"mount">, L<C<mv>|/"mv">,
-L<C<nc>|/"nc">, L<C<netcat>|/"netcat">, L<C<nice>|/"nice">, L<C<nohup>|/"nohup">, L<C<partprobe>|/"partprobe">, L<C<pidof>|/"pidof">, L<C<ping>|/"ping">, L<C<pivot_root>|/"pivot_root">,
-L<C<poweroff>|/"poweroff">, L<C<printf>|/"printf">, L<C<ps>|/"ps">, L<C<pstree>|/"pstree">, L<C<pwd>|/"pwd">, L<C<readlink>|/"readlink">, L<C<realpath>|/"realpath">, L<C<reboot>|/"reboot">,
-L<C<reset>|/"reset">, L<C<rm>|/"rm">, L<C<rmdir>|/"rmdir">, L<C<route>|/"route">, L<C<sed>|/"sed">, L<C<seedrng>|/"seedrng">, L<C<seq>|/"seq">, L<C<sh>|/"sh">, L<C<sha384sum>|/"sha384sum">, L<C<sleep>|/"sleep">,
-L<C<sort>|/"sort">, L<C<ssl_server>|/"ssl_server">, L<C<stat>|/"stat">, L<C<stty>|/"stty">, L<C<sync>|/"sync">, L<C<tail>|/"tail">, L<C<tee>|/"tee">, L<C<telnet>|/"telnet">, C<test>,
-L<C<timeout>|/"timeout">, L<C<top>|/"top">, L<C<touch>|/"touch">, L<C<tr>|/"tr">, C<tree>, L<C<tsort>|/"tsort">, L<C<udhcpc>|/"udhcpc">, L<C<uevent>|/"uevent">, L<C<umount>|/"umount">, L<C<uname>|/"uname">,
-L<C<unix2dos>|/"unix2dos">, L<C<uuidgen>|/"uuidgen">, L<C<vi>|/"vi">, L<C<vmstat>|/"vmstat">, L<C<watch>|/"watch">, L<C<wc>|/"wc">, L<C<wget>|/"wget">
+C<[>, C<[[>, L<C<addgroup>|/"addgroup">, L<C<adduser>|/"adduser">, L<C<arp>|/"arp">, L<C<ash>|/"ash">, L<C<awk>|/"awk">, L<C<basename>|/"basename">, L<C<blkid>|/"blkid">, L<C<cat>|/"cat">,
+L<C<chgrp>|/"chgrp">, L<C<chmod>|/"chmod">, L<C<chown>|/"chown">, L<C<clear>|/"clear">, L<C<comm>|/"comm">, L<C<cp>|/"cp">, L<C<crc32>|/"crc32">, L<C<cttyhack>|/"cttyhack">, L<C<cut>|/"cut">, L<C<date>|/"date">,
+L<C<dd>|/"dd">, L<C<delgroup>|/"delgroup">, L<C<deluser>|/"deluser">, L<C<df>|/"df">, L<C<dmesg>|/"dmesg">, L<C<dos2unix>|/"dos2unix">, L<C<du>|/"du">, L<C<echo>|/"echo">, L<C<env>|/"env">, C<false>,
+L<C<fdisk>|/"fdisk">, L<C<find>|/"find">, L<C<free>|/"free">, L<C<fsck>|/"fsck">, L<C<ftpget>|/"ftpget">, L<C<getfattr>|/"getfattr">, L<C<getty>|/"getty">, L<C<grep>|/"grep">, L<C<halt>|/"halt">,
+L<C<hdparm>|/"hdparm">, L<C<head>|/"head">, L<C<hexedit>|/"hexedit">, L<C<hostname>|/"hostname">, L<C<httpd>|/"httpd">, L<C<hwclock>|/"hwclock">, L<C<ifconfig>|/"ifconfig">, L<C<ifdown>|/"ifdown">,
+L<C<ifup>|/"ifup">, L<C<init>|/"init">, L<C<ip>|/"ip">, L<C<ipaddr>|/"ipaddr">, L<C<iplink>|/"iplink">, L<C<iproute>|/"iproute">, L<C<kill>|/"kill">, L<C<klogd>|/"klogd">, L<C<less>|/"less">, L<C<ln>|/"ln">,
+L<C<login>|/"login">, L<C<losetup>|/"losetup">, L<C<ls>|/"ls">, L<C<lsblk>|/"lsblk">, L<C<makedevs>|/"makedevs">, L<C<mdev>|/"mdev">, L<C<mkdir>|/"mkdir">, L<C<mkdosfs>|/"mkdosfs">, L<C<mkfifo>|/"mkfifo">,
+L<C<mkfs.vfat>|/"mkfs.vfat">, L<C<mknod>|/"mknod">, L<C<mkswap>|/"mkswap">, L<C<mktemp>|/"mktemp">, L<C<mount>|/"mount">, L<C<mv>|/"mv">, L<C<nc>|/"nc">, L<C<netcat>|/"netcat">, L<C<nice>|/"nice">,
+L<C<nohup>|/"nohup">, L<C<partprobe>|/"partprobe">, L<C<passwd>|/"passwd">, L<C<pidof>|/"pidof">, L<C<ping>|/"ping">, L<C<pivot_root>|/"pivot_root">, L<C<poweroff>|/"poweroff">, L<C<printf>|/"printf">,
+L<C<ps>|/"ps">, L<C<pstree>|/"pstree">, L<C<pwd>|/"pwd">, L<C<readlink>|/"readlink">, L<C<realpath>|/"realpath">, L<C<reboot>|/"reboot">, L<C<reset>|/"reset">, L<C<rm>|/"rm">, L<C<rmdir>|/"rmdir">,
+L<C<route>|/"route">, L<C<sed>|/"sed">, L<C<seedrng>|/"seedrng">, L<C<seq>|/"seq">, L<C<sh>|/"sh">, L<C<sha384sum>|/"sha384sum">, L<C<sleep>|/"sleep">, L<C<sort>|/"sort">, L<C<ssl_server>|/"ssl_server">,
+L<C<stat>|/"stat">, L<C<stty>|/"stty">, L<C<su>|/"su">, L<C<sync>|/"sync">, L<C<syslogd>|/"syslogd">, L<C<tail>|/"tail">, L<C<tee>|/"tee">, L<C<telnet>|/"telnet">, C<test>, L<C<timeout>|/"timeout">,
+L<C<top>|/"top">, L<C<touch>|/"touch">, L<C<tr>|/"tr">, C<tree>, L<C<tsort>|/"tsort">, L<C<udhcpc>|/"udhcpc">, L<C<uevent>|/"uevent">, L<C<umount>|/"umount">, L<C<uname>|/"uname">,
+L<C<unix2dos>|/"unix2dos">, L<C<uuidgen>|/"uuidgen">, L<C<vi>|/"vi">, L<C<vmstat>|/"vmstat">, L<C<watch>|/"watch">, L<C<wc>|/"wc">, L<C<wget>|/"wget">, L<C<whoami>|/"whoami">
 
 =head1 COMMAND DESCRIPTIONS
+
+=head2 addgroup
+
+addgroup [-g GID] [-S] [USER] GROUP
+
+Add a group or add a user to a group
+
+	-g GID	Group id
+	-S	Create a system group
+
+=head2 adduser
+
+adduser [OPTIONS] USER [GROUP]
+
+Create new user, or add USER to GROUP
+
+	-h DIR		Home directory
+	-g GECOS	GECOS field
+	-s SHELL	Login shell
+	-G GRP		Group
+	-S		Create a system user
+	-D		Don't assign a password
+	-H		Don't create home directory
+	-u UID		User id
+	-k SKEL		Skeleton directory (/etc/skel)
 
 =head2 arp
 
@@ -132,11 +159,14 @@ awk [OPTIONS] [AWK_PROGRAM] [FILE]...
 	-f/-E FILE	Read program from FILE
 	-e AWK_PROGRAM
 
-=head2 bash
+=head2 basename
 
-bash [-il] [-|+Cabefmnuvx] [-|+o OPT]... [-c 'SCRIPT' [ARG0 ARGS] | FILE ARGS | -s ARGS]
+basename FILE [SUFFIX] | -a FILE... | -s SUFFIX FILE...
 
-Unix shell interpreter
+Strip directory path and SUFFIX from FILE
+
+	-a		All arguments are FILEs
+	-s SUFFIX	Remove SUFFIX (implies -a)
 
 =head2 blkid
 
@@ -267,7 +297,7 @@ Print selected fields from FILEs to stdout
 	-F LIST	Print only these fields (-d is regex)
 	-s	Drop lines with no delimiter (else print them in full)
 	-D	Don't sort ranges; line without delimiters has one field
-	-O SEP	Output field delimeter (default = -d for -f, one space for -F)
+	--output-delimiter SEP	Output field delimeter
 	-n	Ignored
 
 =head2 date
@@ -326,6 +356,18 @@ Copy a file with converting and formatting
 	status=none	Suppress all output
 
 N may be suffixed by c (1), w (2), b (512), kB (1000), k (1024), MB, M, GB, G
+
+=head2 delgroup
+
+delgroup [USER] GROUP
+
+Delete group GROUP from the system or user USER from group GROUP
+
+=head2 deluser
+
+deluser [--remove-home] USER
+
+Delete USER from the system
 
 =head2 df
 
@@ -485,6 +527,20 @@ free [-bkmgh]
 
 Display free and used memory
 
+=head2 fsck
+
+fsck [-ANPRTV] [-t FSTYPE] [FS_OPTS] [BLOCKDEV]...
+
+Check and repair filesystems
+
+	-A	Walk /etc/fstab and check all filesystems
+	-N	Don't execute, just show what would be done
+	-P	With -A, check filesystems in parallel
+	-R	With -A, skip the root filesystem
+	-T	Don't show title on startup
+	-V	Verbose
+	-t TYPE	List of filesystem types to check
+
 =head2 ftpget
 
 ftpget [OPTIONS] HOST [LOCAL_FILE] REMOTE_FILE
@@ -507,6 +563,26 @@ Get extended attributes
 	-h		Do not follow symlinks
 	-d		Dump all attributes
 	-n ATTR		Get attribute ATTR
+
+=head2 getty
+
+getty [OPTIONS] BAUD_RATE[,BAUD_RATE]... TTY [TERMTYPE]
+
+Open TTY, prompt for login name, then invoke /bin/login
+
+	-h		Enable hardware RTS/CTS flow control
+	-L		Set CLOCAL (ignore Carrier Detect state)
+	-m		Get baud rate from modem's CONNECT status message
+	-n		Don't prompt for login name
+	-w		Wait for CR or LF before sending /etc/issue
+	-i		Don't display /etc/issue
+	-f ISSUE_FILE	Display ISSUE_FILE instead of /etc/issue
+	-l LOGIN	Invoke LOGIN instead of /bin/login
+	-t SEC		Terminate after SEC if no login name is read
+	-I INITSTR	Send INITSTR before anything else
+	-H HOST		Log HOST into the utmp file as the hostname
+
+BAUD_RATE of 0 leaves it unchanged
 
 =head2 grep
 
@@ -641,6 +717,23 @@ Listen for incoming HTTP requests
 	-e STRING	HTML encode STRING
 	-d STRING	URL decode STRING
 
+=head2 hwclock
+
+hwclock [-ul] [-f DEV] [-s|-w|--systz|--param-get PARAM|--param-set PARAM=VAL]
+
+Show or set hardware clock (RTC)
+
+	-f DEV	Use this device (e.g. /dev/rtc2)
+	-u	Assume RTC is kept in UTC
+	-l	Assume RTC is kept in local time
+		(if neither is given, read from /etc/adjtime)
+	-s	Set system time from RTC
+	-w	Set RTC from system time
+	--systz	Set in-kernel timezone, correct system time
+		if RTC is kept in local time
+	--param-get PARAM	Get RTC parameter
+	--param-set PARAM=VAL	Set RTC parameter
+
 =head2 ifconfig
 
 ifconfig [-a] [IFACE] [ADDRESS]
@@ -655,6 +748,30 @@ Configure a network interface
 	[multicast] [[-]promisc] [txqueuelen NN] [[-]dynamic]
 	[mem_start NN] [io_addr NN] [irq NN]
 	[up|down] ...
+
+=head2 ifdown
+
+ifdown [-nmvf] [-i FILE] -a | IFACE...
+
+	-a	Deconfigure all interfaces
+	-i FILE	Use FILE instead of /etc/network/interfaces
+	-n	Dry run
+		(note: doesn't disable mappings)
+	-m	Don't run any mappings
+	-v	Print out what would happen before doing it
+	-f	Force
+
+=head2 ifup
+
+ifup [-nmvf] [-i FILE] -a | IFACE...
+
+	-a	Configure all interfaces
+	-i FILE	Use FILE instead of /etc/network/interfaces
+	-n	Dry run
+		(note: doesn't disable mappings)
+	-m	Don't run any mappings
+	-v	Print out what would happen before doing it
+	-f	Force
 
 =head2 init
 
@@ -743,6 +860,15 @@ Send a signal (default: TERM) to given PIDs
 
 	-l	List all signal names and numbers
 
+=head2 klogd
+
+klogd [-c N] [-n]
+
+Log kernel messages to syslog
+
+	-c N	Print to console messages more urgent than prio N (1-8)
+	-n	Run in foreground
+
 =head2 less
 
 less [-EFIMmNSRh~] [FILE]...
@@ -772,6 +898,19 @@ Create a link LINK or DIR/TARGET to the specified TARGET(s)
 	-S SUF	Use suffix instead of ~ when making backup files
 	-T	Treat LINK as a file, not DIR
 	-v	Verbose
+
+=head2 login
+
+login [-p] [-h HOST] [[-f] USER]
+
+Begin a new session on the system
+
+	-f	Don't authenticate (user already authenticated)
+	-h HOST	Host user came from (for network logins)
+	-p	Preserve environment
+
+$LOGIN_TIMEOUT		Seconds (default 60, 0 - disable)
+$LOGIN_PRE_SUID_SCRIPT	Execute before user ID change
 
 =head2 losetup
 
@@ -808,7 +947,9 @@ List directory contents
 	-s	List allocated blocks
 	-lc	List ctime
 	-lu	List atime
+	--full-time	List full date/time
 	-h	Human readable sizes (1K 243M 2G)
+	--group-directories-first
 	-S	Sort by size
 	-X	Sort by extension
 	-v	Sort by version
@@ -817,6 +958,7 @@ List directory contents
 	-tu	Sort by atime
 	-r	Reverse sort order
 	-w N	Format N columns wide
+	--color[={always,never,auto}]
 
 =head2 lsblk
 
@@ -841,6 +983,33 @@ Where name is the file name, type can be one of:
 uid is the user id for the target file, gid is the group id for the
 target file. The rest of the entries (major, minor, etc) apply to
 to device special files. A '-' may be used for blank entries.
+
+=head2 mdev
+
+mdev [-vS] { [-s] | [-df] }
+
+	-v	Verbose
+	-S	Log to syslog too
+	-s	Scan /sys and populate /dev
+	-d	Daemon, listen on netlink
+	-f	Run in foreground
+
+Bare mdev is a kernel hotplug helper. To activate it:
+	echo /sbin/mdev >/proc/sys/kernel/hotplug
+
+It uses /etc/mdev.conf with lines
+	[-][ENV=regex;]...DEVNAME UID:GID PERM [>|=PATH]|[!] [@|$|*PROG]
+where DEVNAME is device name regex, @major,minor[-minor2], or
+environment variable regex. A common use of the latter is
+to load modules for hotplugged devices:
+
+	$MODALIAS=.* 0:0 660 @modprobe "$MODALIAS"
+
+If /dev/mdev.seq file exists, mdev will wait for its value
+to match $SEQNUM variable. This prevents plug/unplug races.
+To activate this feature, create empty /dev/mdev.seq at boot.
+
+If /dev/mdev.log file exists, debug log will be appended to it.
 
 =head2 mkdir
 
@@ -1017,6 +1186,17 @@ partprobe DEVICE...
 
 Ask kernel to rescan partition table
 
+=head2 passwd
+
+passwd [-a ALG] [-dlu] [USER]
+
+Change USER's password (default: current user)
+
+	-a ALG	des,md5,sha256/512,yescrypt (default des)
+	-d	Set password to ''
+	-l	Lock (disable) account
+	-u	Unlock (enable) account
+
 =head2 pidof
 
 pidof [-s] [-o PID] [NAME]...
@@ -1141,6 +1321,7 @@ rmdir [-p] DIRECTORY...
 Remove DIRECTORY if it is empty
 
 	-p	Include parents
+	--ignore-fail-on-non-empty
 
 =head2 route
 
@@ -1303,6 +1484,17 @@ and deviations from stty sane
 	-g		Print in stty-readable form
 	[SETTING]	See manpage
 
+=head2 su
+
+su [-lmp] [-s SH] [-] [USER [FILE ARGS | -c 'CMD' [ARG0 ARGS]]]
+
+Run shell under USER (by default, root)
+
+	-,-l	Clear environment, go to home dir, run shell as login shell
+	-p,-m	Do not set new $HOME, $SHELL, $USER, $LOGNAME
+	-c CMD	Command to pass to 'sh -c'
+	-s SH	Shell to use instead of user's default
+
 =head2 sync
 
 sync [-df] [FILE]...
@@ -1310,6 +1502,26 @@ sync [-df] [FILE]...
 Write all buffered blocks (in FILEs) to disk
 	-d	Avoid syncing metadata
 	-f	Sync filesystems underlying FILEs
+
+=head2 syslogd
+
+syslogd [OPTIONS]
+
+System logging utility
+
+	-n		Run in foreground
+	-R HOST[:PORT]	Log to HOST:PORT (default PORT:514)
+	-L		Log locally and via network (default is network only if -R)
+	-C[size_kb]	Log to shared mem buffer (use logread to read it)
+	-K		Log to kernel printk buffer (use dmesg to read it)
+	-O FILE		Log to FILE (default: /var/log/messages, stdout if -)
+	-s SIZE		Max size (KB) before rotation (default 200KB, 0=off)
+	-b N		N rotated logs to keep (default 1, max 99, 0=purge)
+	-l N		Log only messages more urgent than prio N (1-8)
+	-S		Smaller output
+	-t		Strip client-generated timestamps
+	-D		Drop duplicates
+	-f FILE		Use FILE as config (default:/etc/syslog.conf)
 
 =head2 tail
 
@@ -1540,10 +1752,17 @@ Count lines, words, and bytes for FILEs (or stdin)
 
 =head2 wget
 
-wget [-cqS] [-O FILE] [-o LOGFILE] [-Y on/off] [-P DIR] [-U AGENT] [-T SEC] URL...
+wget [-cqS] [--spider] [-O FILE] [-o LOGFILE] [--header STR]
+	[--post-data STR | --post-file FILE] [-Y on/off]
+	[--no-check-certificate] [-P DIR] [-U AGENT] [-T SEC] URL...
 
 Retrieve files via HTTP or FTP
 
+	--spider	Only check URL existence: $? is 0 if exists
+	--header STR	Add STR (of form 'header: value') to headers
+	--post-data STR	Send STR using POST method
+	--post-file FILE	Send FILE using POST method
+	--no-check-certificate	Don't validate the server's certificate
 	-c		Continue retrieval of aborted transfer
 	-q		Quiet
 	-P DIR		Save to DIR (default .)
@@ -1553,6 +1772,12 @@ Retrieve files via HTTP or FTP
 	-o LOGFILE	Log messages to FILE
 	-U STR		Use STR for User-Agent header
 	-Y on/off	Use proxy
+
+=head2 whoami
+
+whoami 
+
+Print the user name associated with the current effective user id
 
 =head1 LIBC NSS
 

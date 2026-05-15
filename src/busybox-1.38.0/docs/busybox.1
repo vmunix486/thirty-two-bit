@@ -144,20 +144,49 @@ been enabled, more detailed usage information will also be available.
 .IX Header "COMMANDS"
 Currently available applets include:
 .PP
-\&\f(CW\*(C`[\*(C'\fR, \f(CW\*(C`[[\*(C'\fR, \f(CW\*(C`arp\*(C'\fR, \f(CW\*(C`ash\*(C'\fR, \f(CW\*(C`awk\*(C'\fR, \f(CW\*(C`bash\*(C'\fR, \f(CW\*(C`blkid\*(C'\fR, \f(CW\*(C`cat\*(C'\fR, \f(CW\*(C`chgrp\*(C'\fR, \f(CW\*(C`chmod\*(C'\fR, \f(CW\*(C`chown\*(C'\fR, \f(CW\*(C`clear\*(C'\fR,
-\&\f(CW\*(C`comm\*(C'\fR, \f(CW\*(C`cp\*(C'\fR, \f(CW\*(C`crc32\*(C'\fR, \f(CW\*(C`cttyhack\*(C'\fR, \f(CW\*(C`cut\*(C'\fR, \f(CW\*(C`date\*(C'\fR, \f(CW\*(C`dd\*(C'\fR, \f(CW\*(C`df\*(C'\fR, \f(CW\*(C`dmesg\*(C'\fR, \f(CW\*(C`dos2unix\*(C'\fR, \f(CW\*(C`du\*(C'\fR,
-\&\f(CW\*(C`echo\*(C'\fR, \f(CW\*(C`env\*(C'\fR, \f(CW\*(C`false\*(C'\fR, \f(CW\*(C`fdisk\*(C'\fR, \f(CW\*(C`find\*(C'\fR, \f(CW\*(C`free\*(C'\fR, \f(CW\*(C`ftpget\*(C'\fR, \f(CW\*(C`getfattr\*(C'\fR, \f(CW\*(C`grep\*(C'\fR, \f(CW\*(C`halt\*(C'\fR,
-\&\f(CW\*(C`hdparm\*(C'\fR, \f(CW\*(C`head\*(C'\fR, \f(CW\*(C`hexedit\*(C'\fR, \f(CW\*(C`hostname\*(C'\fR, \f(CW\*(C`httpd\*(C'\fR, \f(CW\*(C`ifconfig\*(C'\fR, \f(CW\*(C`init\*(C'\fR, \f(CW\*(C`ip\*(C'\fR, \f(CW\*(C`ipaddr\*(C'\fR,
-\&\f(CW\*(C`iplink\*(C'\fR, \f(CW\*(C`iproute\*(C'\fR, \f(CW\*(C`kill\*(C'\fR, \f(CW\*(C`less\*(C'\fR, \f(CW\*(C`ln\*(C'\fR, \f(CW\*(C`losetup\*(C'\fR, \f(CW\*(C`ls\*(C'\fR, \f(CW\*(C`lsblk\*(C'\fR, \f(CW\*(C`makedevs\*(C'\fR,
-\&\f(CW\*(C`mkdir\*(C'\fR, \f(CW\*(C`mkdosfs\*(C'\fR, \f(CW\*(C`mkfifo\*(C'\fR, \f(CW\*(C`mkfs.vfat\*(C'\fR, \f(CW\*(C`mknod\*(C'\fR, \f(CW\*(C`mkswap\*(C'\fR, \f(CW\*(C`mktemp\*(C'\fR, \f(CW\*(C`mount\*(C'\fR, \f(CW\*(C`mv\*(C'\fR,
-\&\f(CW\*(C`nc\*(C'\fR, \f(CW\*(C`netcat\*(C'\fR, \f(CW\*(C`nice\*(C'\fR, \f(CW\*(C`nohup\*(C'\fR, \f(CW\*(C`partprobe\*(C'\fR, \f(CW\*(C`pidof\*(C'\fR, \f(CW\*(C`ping\*(C'\fR, \f(CW\*(C`pivot_root\*(C'\fR,
-\&\f(CW\*(C`poweroff\*(C'\fR, \f(CW\*(C`printf\*(C'\fR, \f(CW\*(C`ps\*(C'\fR, \f(CW\*(C`pstree\*(C'\fR, \f(CW\*(C`pwd\*(C'\fR, \f(CW\*(C`readlink\*(C'\fR, \f(CW\*(C`realpath\*(C'\fR, \f(CW\*(C`reboot\*(C'\fR,
-\&\f(CW\*(C`reset\*(C'\fR, \f(CW\*(C`rm\*(C'\fR, \f(CW\*(C`rmdir\*(C'\fR, \f(CW\*(C`route\*(C'\fR, \f(CW\*(C`sed\*(C'\fR, \f(CW\*(C`seedrng\*(C'\fR, \f(CW\*(C`seq\*(C'\fR, \f(CW\*(C`sh\*(C'\fR, \f(CW\*(C`sha384sum\*(C'\fR, \f(CW\*(C`sleep\*(C'\fR,
-\&\f(CW\*(C`sort\*(C'\fR, \f(CW\*(C`ssl_server\*(C'\fR, \f(CW\*(C`stat\*(C'\fR, \f(CW\*(C`stty\*(C'\fR, \f(CW\*(C`sync\*(C'\fR, \f(CW\*(C`tail\*(C'\fR, \f(CW\*(C`tee\*(C'\fR, \f(CW\*(C`telnet\*(C'\fR, \f(CW\*(C`test\*(C'\fR,
-\&\f(CW\*(C`timeout\*(C'\fR, \f(CW\*(C`top\*(C'\fR, \f(CW\*(C`touch\*(C'\fR, \f(CW\*(C`tr\*(C'\fR, \f(CW\*(C`tree\*(C'\fR, \f(CW\*(C`tsort\*(C'\fR, \f(CW\*(C`udhcpc\*(C'\fR, \f(CW\*(C`uevent\*(C'\fR, \f(CW\*(C`umount\*(C'\fR, \f(CW\*(C`uname\*(C'\fR,
-\&\f(CW\*(C`unix2dos\*(C'\fR, \f(CW\*(C`uuidgen\*(C'\fR, \f(CW\*(C`vi\*(C'\fR, \f(CW\*(C`vmstat\*(C'\fR, \f(CW\*(C`watch\*(C'\fR, \f(CW\*(C`wc\*(C'\fR, \f(CW\*(C`wget\*(C'\fR
+\&\f(CW\*(C`[\*(C'\fR, \f(CW\*(C`[[\*(C'\fR, \f(CW\*(C`addgroup\*(C'\fR, \f(CW\*(C`adduser\*(C'\fR, \f(CW\*(C`arp\*(C'\fR, \f(CW\*(C`ash\*(C'\fR, \f(CW\*(C`awk\*(C'\fR, \f(CW\*(C`basename\*(C'\fR, \f(CW\*(C`blkid\*(C'\fR, \f(CW\*(C`cat\*(C'\fR,
+\&\f(CW\*(C`chgrp\*(C'\fR, \f(CW\*(C`chmod\*(C'\fR, \f(CW\*(C`chown\*(C'\fR, \f(CW\*(C`clear\*(C'\fR, \f(CW\*(C`comm\*(C'\fR, \f(CW\*(C`cp\*(C'\fR, \f(CW\*(C`crc32\*(C'\fR, \f(CW\*(C`cttyhack\*(C'\fR, \f(CW\*(C`cut\*(C'\fR, \f(CW\*(C`date\*(C'\fR,
+\&\f(CW\*(C`dd\*(C'\fR, \f(CW\*(C`delgroup\*(C'\fR, \f(CW\*(C`deluser\*(C'\fR, \f(CW\*(C`df\*(C'\fR, \f(CW\*(C`dmesg\*(C'\fR, \f(CW\*(C`dos2unix\*(C'\fR, \f(CW\*(C`du\*(C'\fR, \f(CW\*(C`echo\*(C'\fR, \f(CW\*(C`env\*(C'\fR, \f(CW\*(C`false\*(C'\fR,
+\&\f(CW\*(C`fdisk\*(C'\fR, \f(CW\*(C`find\*(C'\fR, \f(CW\*(C`free\*(C'\fR, \f(CW\*(C`fsck\*(C'\fR, \f(CW\*(C`ftpget\*(C'\fR, \f(CW\*(C`getfattr\*(C'\fR, \f(CW\*(C`getty\*(C'\fR, \f(CW\*(C`grep\*(C'\fR, \f(CW\*(C`halt\*(C'\fR,
+\&\f(CW\*(C`hdparm\*(C'\fR, \f(CW\*(C`head\*(C'\fR, \f(CW\*(C`hexedit\*(C'\fR, \f(CW\*(C`hostname\*(C'\fR, \f(CW\*(C`httpd\*(C'\fR, \f(CW\*(C`hwclock\*(C'\fR, \f(CW\*(C`ifconfig\*(C'\fR, \f(CW\*(C`ifdown\*(C'\fR,
+\&\f(CW\*(C`ifup\*(C'\fR, \f(CW\*(C`init\*(C'\fR, \f(CW\*(C`ip\*(C'\fR, \f(CW\*(C`ipaddr\*(C'\fR, \f(CW\*(C`iplink\*(C'\fR, \f(CW\*(C`iproute\*(C'\fR, \f(CW\*(C`kill\*(C'\fR, \f(CW\*(C`klogd\*(C'\fR, \f(CW\*(C`less\*(C'\fR, \f(CW\*(C`ln\*(C'\fR,
+\&\f(CW\*(C`login\*(C'\fR, \f(CW\*(C`losetup\*(C'\fR, \f(CW\*(C`ls\*(C'\fR, \f(CW\*(C`lsblk\*(C'\fR, \f(CW\*(C`makedevs\*(C'\fR, \f(CW\*(C`mdev\*(C'\fR, \f(CW\*(C`mkdir\*(C'\fR, \f(CW\*(C`mkdosfs\*(C'\fR, \f(CW\*(C`mkfifo\*(C'\fR,
+\&\f(CW\*(C`mkfs.vfat\*(C'\fR, \f(CW\*(C`mknod\*(C'\fR, \f(CW\*(C`mkswap\*(C'\fR, \f(CW\*(C`mktemp\*(C'\fR, \f(CW\*(C`mount\*(C'\fR, \f(CW\*(C`mv\*(C'\fR, \f(CW\*(C`nc\*(C'\fR, \f(CW\*(C`netcat\*(C'\fR, \f(CW\*(C`nice\*(C'\fR,
+\&\f(CW\*(C`nohup\*(C'\fR, \f(CW\*(C`partprobe\*(C'\fR, \f(CW\*(C`passwd\*(C'\fR, \f(CW\*(C`pidof\*(C'\fR, \f(CW\*(C`ping\*(C'\fR, \f(CW\*(C`pivot_root\*(C'\fR, \f(CW\*(C`poweroff\*(C'\fR, \f(CW\*(C`printf\*(C'\fR,
+\&\f(CW\*(C`ps\*(C'\fR, \f(CW\*(C`pstree\*(C'\fR, \f(CW\*(C`pwd\*(C'\fR, \f(CW\*(C`readlink\*(C'\fR, \f(CW\*(C`realpath\*(C'\fR, \f(CW\*(C`reboot\*(C'\fR, \f(CW\*(C`reset\*(C'\fR, \f(CW\*(C`rm\*(C'\fR, \f(CW\*(C`rmdir\*(C'\fR,
+\&\f(CW\*(C`route\*(C'\fR, \f(CW\*(C`sed\*(C'\fR, \f(CW\*(C`seedrng\*(C'\fR, \f(CW\*(C`seq\*(C'\fR, \f(CW\*(C`sh\*(C'\fR, \f(CW\*(C`sha384sum\*(C'\fR, \f(CW\*(C`sleep\*(C'\fR, \f(CW\*(C`sort\*(C'\fR, \f(CW\*(C`ssl_server\*(C'\fR,
+\&\f(CW\*(C`stat\*(C'\fR, \f(CW\*(C`stty\*(C'\fR, \f(CW\*(C`su\*(C'\fR, \f(CW\*(C`sync\*(C'\fR, \f(CW\*(C`syslogd\*(C'\fR, \f(CW\*(C`tail\*(C'\fR, \f(CW\*(C`tee\*(C'\fR, \f(CW\*(C`telnet\*(C'\fR, \f(CW\*(C`test\*(C'\fR, \f(CW\*(C`timeout\*(C'\fR,
+\&\f(CW\*(C`top\*(C'\fR, \f(CW\*(C`touch\*(C'\fR, \f(CW\*(C`tr\*(C'\fR, \f(CW\*(C`tree\*(C'\fR, \f(CW\*(C`tsort\*(C'\fR, \f(CW\*(C`udhcpc\*(C'\fR, \f(CW\*(C`uevent\*(C'\fR, \f(CW\*(C`umount\*(C'\fR, \f(CW\*(C`uname\*(C'\fR,
+\&\f(CW\*(C`unix2dos\*(C'\fR, \f(CW\*(C`uuidgen\*(C'\fR, \f(CW\*(C`vi\*(C'\fR, \f(CW\*(C`vmstat\*(C'\fR, \f(CW\*(C`watch\*(C'\fR, \f(CW\*(C`wc\*(C'\fR, \f(CW\*(C`wget\*(C'\fR, \f(CW\*(C`whoami\*(C'\fR
 .SH "COMMAND DESCRIPTIONS"
 .IX Header "COMMAND DESCRIPTIONS"
+.SS addgroup
+.IX Subsection "addgroup"
+addgroup [\-g GID] [\-S] [USER] GROUP
+.PP
+Add a group or add a user to a group
+.PP
+.Vb 2
+\&        \-g GID  Group id
+\&        \-S      Create a system group
+.Ve
+.SS adduser
+.IX Subsection "adduser"
+adduser [OPTIONS] USER [GROUP]
+.PP
+Create new user, or add USER to GROUP
+.PP
+.Vb 9
+\&        \-h DIR          Home directory
+\&        \-g GECOS        GECOS field
+\&        \-s SHELL        Login shell
+\&        \-G GRP          Group
+\&        \-S              Create a system user
+\&        \-D              Don\*(Aqt assign a password
+\&        \-H              Don\*(Aqt create home directory
+\&        \-u UID          User id
+\&        \-k SKEL         Skeleton directory (/etc/skel)
+.Ve
 .SS arp
 .IX Subsection "arp"
 arp 
@@ -195,11 +224,16 @@ awk [OPTIONS] [AWK_PROGRAM] [FILE]...
 \&        \-f/\-E FILE      Read program from FILE
 \&        \-e AWK_PROGRAM
 .Ve
-.SS bash
-.IX Subsection "bash"
-bash [\-il] [\-|+Cabefmnuvx] [\-|+o OPT]... [\-c \*(AqSCRIPT\*(Aq [ARG0 ARGS] | FILE ARGS | \-s ARGS]
+.SS basename
+.IX Subsection "basename"
+basename FILE [SUFFIX] | \-a FILE... | \-s SUFFIX FILE...
 .PP
-Unix shell interpreter
+Strip directory path and SUFFIX from FILE
+.PP
+.Vb 2
+\&        \-a              All arguments are FILEs
+\&        \-s SUFFIX       Remove SUFFIX (implies \-a)
+.Ve
 .SS blkid
 .IX Subsection "blkid"
 blkid [BLOCKDEV]...
@@ -334,7 +368,7 @@ Print selected fields from FILEs to stdout
 \&        \-F LIST Print only these fields (\-d is regex)
 \&        \-s      Drop lines with no delimiter (else print them in full)
 \&        \-D      Don\*(Aqt sort ranges; line without delimiters has one field
-\&        \-O SEP  Output field delimeter (default = \-d for \-f, one space for \-F)
+\&        \-\-output\-delimiter SEP  Output field delimeter
 \&        \-n      Ignored
 .Ve
 .SS date
@@ -398,6 +432,16 @@ Copy a file with converting and formatting
 .Ve
 .PP
 N may be suffixed by c (1), w (2), b (512), kB (1000), k (1024), MB, M, GB, G
+.SS delgroup
+.IX Subsection "delgroup"
+delgroup [USER] GROUP
+.PP
+Delete group GROUP from the system or user USER from group GROUP
+.SS deluser
+.IX Subsection "deluser"
+deluser [\-\-remove\-home] USER
+.PP
+Delete USER from the system
 .SS df
 .IX Subsection "df"
 df [\-PkmhTai] [\-B SIZE] [\-t TYPE] [FILESYSTEM]...
@@ -565,6 +609,21 @@ Actions:
 free [\-bkmgh]
 .PP
 Display free and used memory
+.SS fsck
+.IX Subsection "fsck"
+fsck [\-ANPRTV] [\-t FSTYPE] [FS_OPTS] [BLOCKDEV]...
+.PP
+Check and repair filesystems
+.PP
+.Vb 7
+\&        \-A      Walk /etc/fstab and check all filesystems
+\&        \-N      Don\*(Aqt execute, just show what would be done
+\&        \-P      With \-A, check filesystems in parallel
+\&        \-R      With \-A, skip the root filesystem
+\&        \-T      Don\*(Aqt show title on startup
+\&        \-V      Verbose
+\&        \-t TYPE List of filesystem types to check
+.Ve
 .SS ftpget
 .IX Subsection "ftpget"
 ftpget [OPTIONS] HOST [LOCAL_FILE] REMOTE_FILE
@@ -589,6 +648,27 @@ Get extended attributes
 \&        \-d              Dump all attributes
 \&        \-n ATTR         Get attribute ATTR
 .Ve
+.SS getty
+.IX Subsection "getty"
+getty [OPTIONS] BAUD_RATE[,BAUD_RATE]... TTY [TERMTYPE]
+.PP
+Open TTY, prompt for login name, then invoke /bin/login
+.PP
+.Vb 11
+\&        \-h              Enable hardware RTS/CTS flow control
+\&        \-L              Set CLOCAL (ignore Carrier Detect state)
+\&        \-m              Get baud rate from modem\*(Aqs CONNECT status message
+\&        \-n              Don\*(Aqt prompt for login name
+\&        \-w              Wait for CR or LF before sending /etc/issue
+\&        \-i              Don\*(Aqt display /etc/issue
+\&        \-f ISSUE_FILE   Display ISSUE_FILE instead of /etc/issue
+\&        \-l LOGIN        Invoke LOGIN instead of /bin/login
+\&        \-t SEC          Terminate after SEC if no login name is read
+\&        \-I INITSTR      Send INITSTR before anything else
+\&        \-H HOST         Log HOST into the utmp file as the hostname
+.Ve
+.PP
+BAUD_RATE of 0 leaves it unchanged
 .SS grep
 .IX Subsection "grep"
 grep [\-HhnlLoqvsrRiwFE] [\-m N] { PATTERN | \-e PATTERN... | \-f FILE... } [FILE]...
@@ -727,6 +807,24 @@ Listen for incoming HTTP requests
 \&        \-e STRING       HTML encode STRING
 \&        \-d STRING       URL decode STRING
 .Ve
+.SS hwclock
+.IX Subsection "hwclock"
+hwclock [\-ul] [\-f DEV] [\-s|\-w|\-\-systz|\-\-param\-get PARAM|\-\-param\-set PARAM=VAL]
+.PP
+Show or set hardware clock (RTC)
+.PP
+.Vb 10
+\&        \-f DEV  Use this device (e.g. /dev/rtc2)
+\&        \-u      Assume RTC is kept in UTC
+\&        \-l      Assume RTC is kept in local time
+\&                (if neither is given, read from /etc/adjtime)
+\&        \-s      Set system time from RTC
+\&        \-w      Set RTC from system time
+\&        \-\-systz Set in\-kernel timezone, correct system time
+\&                if RTC is kept in local time
+\&        \-\-param\-get PARAM       Get RTC parameter
+\&        \-\-param\-set PARAM=VAL   Set RTC parameter
+.Ve
 .SS ifconfig
 .IX Subsection "ifconfig"
 ifconfig [\-a] [IFACE] [ADDRESS]
@@ -742,6 +840,32 @@ Configure a network interface
 \&        [multicast] [[\-]promisc] [txqueuelen NN] [[\-]dynamic]
 \&        [mem_start NN] [io_addr NN] [irq NN]
 \&        [up|down] ...
+.Ve
+.SS ifdown
+.IX Subsection "ifdown"
+ifdown [\-nmvf] [\-i FILE] \-a | IFACE...
+.PP
+.Vb 7
+\&        \-a      Deconfigure all interfaces
+\&        \-i FILE Use FILE instead of /etc/network/interfaces
+\&        \-n      Dry run
+\&                (note: doesn\*(Aqt disable mappings)
+\&        \-m      Don\*(Aqt run any mappings
+\&        \-v      Print out what would happen before doing it
+\&        \-f      Force
+.Ve
+.SS ifup
+.IX Subsection "ifup"
+ifup [\-nmvf] [\-i FILE] \-a | IFACE...
+.PP
+.Vb 7
+\&        \-a      Configure all interfaces
+\&        \-i FILE Use FILE instead of /etc/network/interfaces
+\&        \-n      Dry run
+\&                (note: doesn\*(Aqt disable mappings)
+\&        \-m      Don\*(Aqt run any mappings
+\&        \-v      Print out what would happen before doing it
+\&        \-f      Force
 .Ve
 .SS init
 .IX Subsection "init"
@@ -826,6 +950,16 @@ Send a signal (default: TERM) to given PIDs
 .Vb 1
 \&        \-l      List all signal names and numbers
 .Ve
+.SS klogd
+.IX Subsection "klogd"
+klogd [\-c N] [\-n]
+.PP
+Log kernel messages to syslog
+.PP
+.Vb 2
+\&        \-c N    Print to console messages more urgent than prio N (1\-8)
+\&        \-n      Run in foreground
+.Ve
 .SS less
 .IX Subsection "less"
 less [\-EFIMmNSRh~] [FILE]...
@@ -858,6 +992,20 @@ Create a link LINK or DIR/TARGET to the specified TARGET(s)
 \&        \-T      Treat LINK as a file, not DIR
 \&        \-v      Verbose
 .Ve
+.SS login
+.IX Subsection "login"
+login [\-p] [\-h HOST] [[\-f] USER]
+.PP
+Begin a new session on the system
+.PP
+.Vb 3
+\&        \-f      Don\*(Aqt authenticate (user already authenticated)
+\&        \-h HOST Host user came from (for network logins)
+\&        \-p      Preserve environment
+.Ve
+.PP
+\&\f(CW$LOGIN_TIMEOUT\fR		Seconds (default 60, 0 \- disable)
+\&\f(CW$LOGIN_PRE_SUID_SCRIPT\fR	Execute before user ID change
 .SS losetup
 .IX Subsection "losetup"
 losetup [\-rP] [\-o OFS] {\-f|LOOPDEV} FILE: associate loop devices
@@ -895,7 +1043,9 @@ List directory contents
 \&        \-s      List allocated blocks
 \&        \-lc     List ctime
 \&        \-lu     List atime
+\&        \-\-full\-time     List full date/time
 \&        \-h      Human readable sizes (1K 243M 2G)
+\&        \-\-group\-directories\-first
 \&        \-S      Sort by size
 \&        \-X      Sort by extension
 \&        \-v      Sort by version
@@ -904,6 +1054,7 @@ List directory contents
 \&        \-tu     Sort by atime
 \&        \-r      Reverse sort order
 \&        \-w N    Format N columns wide
+\&        \-\-color[={always,never,auto}]
 .Ve
 .SS lsblk
 .IX Subsection "lsblk"
@@ -927,6 +1078,36 @@ Where name is the file name, type can be one of:
 uid is the user id for the target file, gid is the group id for the
 target file. The rest of the entries (major, minor, etc) apply to
 to device special files. A \*(Aq\-\*(Aq may be used for blank entries.
+.SS mdev
+.IX Subsection "mdev"
+mdev [\-vS] { [\-s] | [\-df] }
+.PP
+.Vb 5
+\&        \-v      Verbose
+\&        \-S      Log to syslog too
+\&        \-s      Scan /sys and populate /dev
+\&        \-d      Daemon, listen on netlink
+\&        \-f      Run in foreground
+.Ve
+.PP
+Bare mdev is a kernel hotplug helper. To activate it:
+	echo /sbin/mdev >/proc/sys/kernel/hotplug
+.PP
+It uses /etc/mdev.conf with lines
+	[\-][ENV=regex;]...DEVNAME UID:GID PERM [>|=PATH]|[!] [@|$|*PROG]
+where DEVNAME is device name regex, \f(CW@major\fR,minor[\-minor2], or
+environment variable regex. A common use of the latter is
+to load modules for hotplugged devices:
+.PP
+.Vb 1
+\&        $MODALIAS=.* 0:0 660 @modprobe "$MODALIAS"
+.Ve
+.PP
+If /dev/mdev.seq file exists, mdev will wait for its value
+to match \f(CW$SEQNUM\fR variable. This prevents plug/unplug races.
+To activate this feature, create empty /dev/mdev.seq at boot.
+.PP
+If /dev/mdev.log file exists, debug log will be appended to it.
 .SS mkdir
 .IX Subsection "mkdir"
 mkdir [\-m MODE] [\-p] DIRECTORY...
@@ -1112,6 +1293,18 @@ Run PROG immune to hangups, with output to a non\-tty
 partprobe DEVICE...
 .PP
 Ask kernel to rescan partition table
+.SS passwd
+.IX Subsection "passwd"
+passwd [\-a ALG] [\-dlu] [USER]
+.PP
+Change USER\*(Aqs password (default: current user)
+.PP
+.Vb 4
+\&        \-a ALG  des,md5,sha256/512,yescrypt (default des)
+\&        \-d      Set password to \*(Aq\*(Aq
+\&        \-l      Lock (disable) account
+\&        \-u      Unlock (enable) account
+.Ve
 .SS pidof
 .IX Subsection "pidof"
 pidof [\-s] [\-o PID] [NAME]...
@@ -1238,8 +1431,9 @@ rmdir [\-p] DIRECTORY...
 .PP
 Remove DIRECTORY if it is empty
 .PP
-.Vb 1
+.Vb 2
 \&        \-p      Include parents
+\&        \-\-ignore\-fail\-on\-non\-empty
 .Ve
 .SS route
 .IX Subsection "route"
@@ -1411,6 +1605,18 @@ and deviations from stty sane
 \&        \-g              Print in stty\-readable form
 \&        [SETTING]       See manpage
 .Ve
+.SS su
+.IX Subsection "su"
+su [\-lmp] [\-s SH] [\-] [USER [FILE ARGS | \-c \*(AqCMD\*(Aq [ARG0 ARGS]]]
+.PP
+Run shell under USER (by default, root)
+.PP
+.Vb 4
+\&        \-,\-l    Clear environment, go to home dir, run shell as login shell
+\&        \-p,\-m   Do not set new $HOME, $SHELL, $USER, $LOGNAME
+\&        \-c CMD  Command to pass to \*(Aqsh \-c\*(Aq
+\&        \-s SH   Shell to use instead of user\*(Aqs default
+.Ve
 .SS sync
 .IX Subsection "sync"
 sync [\-df] [FILE]...
@@ -1418,6 +1624,27 @@ sync [\-df] [FILE]...
 Write all buffered blocks (in FILEs) to disk
 	\-d	Avoid syncing metadata
 	\-f	Sync filesystems underlying FILEs
+.SS syslogd
+.IX Subsection "syslogd"
+syslogd [OPTIONS]
+.PP
+System logging utility
+.PP
+.Vb 10
+\&        \-n              Run in foreground
+\&        \-R HOST[:PORT]  Log to HOST:PORT (default PORT:514)
+\&        \-L              Log locally and via network (default is network only if \-R)
+\&        \-C[size_kb]     Log to shared mem buffer (use logread to read it)
+\&        \-K              Log to kernel printk buffer (use dmesg to read it)
+\&        \-O FILE         Log to FILE (default: /var/log/messages, stdout if \-)
+\&        \-s SIZE         Max size (KB) before rotation (default 200KB, 0=off)
+\&        \-b N            N rotated logs to keep (default 1, max 99, 0=purge)
+\&        \-l N            Log only messages more urgent than prio N (1\-8)
+\&        \-S              Smaller output
+\&        \-t              Strip client\-generated timestamps
+\&        \-D              Drop duplicates
+\&        \-f FILE         Use FILE as config (default:/etc/syslog.conf)
+.Ve
 .SS tail
 .IX Subsection "tail"
 tail [OPTIONS] [FILE]...
@@ -1656,11 +1883,18 @@ Count lines, words, and bytes for FILEs (or stdin)
 .Ve
 .SS wget
 .IX Subsection "wget"
-wget [\-cqS] [\-O FILE] [\-o LOGFILE] [\-Y on/off] [\-P DIR] [\-U AGENT] [\-T SEC] URL...
+wget [\-cqS] [\-\-spider] [\-O FILE] [\-o LOGFILE] [\-\-header STR]
+	[\-\-post\-data STR | \-\-post\-file FILE] [\-Y on/off]
+	[\-\-no\-check\-certificate] [\-P DIR] [\-U AGENT] [\-T SEC] URL...
 .PP
 Retrieve files via HTTP or FTP
 .PP
-.Vb 9
+.Vb 10
+\&        \-\-spider        Only check URL existence: $? is 0 if exists
+\&        \-\-header STR    Add STR (of form \*(Aqheader: value\*(Aq) to headers
+\&        \-\-post\-data STR Send STR using POST method
+\&        \-\-post\-file FILE        Send FILE using POST method
+\&        \-\-no\-check\-certificate  Don\*(Aqt validate the server\*(Aqs certificate
 \&        \-c              Continue retrieval of aborted transfer
 \&        \-q              Quiet
 \&        \-P DIR          Save to DIR (default .)
@@ -1671,6 +1905,11 @@ Retrieve files via HTTP or FTP
 \&        \-U STR          Use STR for User\-Agent header
 \&        \-Y on/off       Use proxy
 .Ve
+.SS whoami
+.IX Subsection "whoami"
+whoami
+.PP
+Print the user name associated with the current effective user id
 .SH "LIBC NSS"
 .IX Header "LIBC NSS"
 GNU Libc (glibc) uses the Name Service Switch (NSS) to configure the behavior
