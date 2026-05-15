@@ -1,0 +1,6 @@
+CREDITS
+
+ - vmunix: Porting build system over to Makefile and adding much more enhancements
+ - marmolak: Making the original gray386linux
+ - w84death: Writing Floppinux and having good documentation for setting up booting on .img files.
+ - musl.cc: Having cross-compiler so I could compile busybox
