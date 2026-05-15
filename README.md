@@ -21,14 +21,12 @@ Just `cd` into the `src` directory and type `make`. It will compile all the cros
 
 # TODO
 
- - Add custom neofetch, pfetch, and screenfetch version
  - Add native C compiler (maybe something like chibicc or TCC)
   - Add binutils
  - Add Nano-X (I AM <ins>**NOT**</ins> DOING X11😭)
  - Add support for making floppinux target
  - Add ncurses
  - Add ALSA
- - Add lighttpd
  - Add links
    - Add directfb as well for graphics and gpm for mouse
  - Add Rogue (I don't like nethack)

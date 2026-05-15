@@ -4,5 +4,4 @@ CREDITS
  - marmolak: Making the original gray386linux
  - w84death: Writing Floppinux and having good documentation for setting up booting on .img files.
  - musl.cc: Having cross-compiler so I could compile busybox
- - ChatGPT: Helping me set up multi-user mode and extlinux booting
- - Dylan Araps: Making pfetch
+ - ChatGPT: Helping me set up multi-user mode and extlinux booting and making ttbfetch

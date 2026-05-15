@@ -138,6 +138,7 @@ perms:
 	sudo chmod +x root/etc/inittab
 	sudo chmod +x root/etc/init.d/rc
 	sudo chmod +x root/usr/bin/slirp-netstart
+	sudo chmod +x root/usr/bin/ttbfetch
 	
 
 clean:

@@ -1,0 +1,9 @@
+# This PS1 is not by me. It is by the mad scientist Rene Rebe. I copied it because I didn't feel like making a PS1
+if [ "$PS1" ]; then
+        PS1='$ ' PS2='> ' PS4='+ '
+        [ "$BASH_VERSION" ] && PS1='\u@\h:\w\$ '
+        [ "$KSH_VERSION" -a   -w / ] && PS1='$USER:$PWD# '
+        [ "$KSH_VERSION" -a ! -w / ] && PS1='$USER:$PWD$ '
+fi
+
+
