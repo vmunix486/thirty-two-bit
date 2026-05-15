@@ -144,5 +144,6 @@ clean:
 	cd 386linux/ && $(MAKE) clean
 	cd musl-1.2.5/ && $(MAKE) clean
 	cd busybox-1.38.0/ && $(MAKE) clean
-	sudo rm -rfv cross/ root/ i486-linux-musl-cross/ extapps/*
+	sudo rm -rfv cross/ root/ i486-linux-musl-cross/
+	cd extapps/ && $(MAKE) clean
 	
