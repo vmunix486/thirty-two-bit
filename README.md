@@ -15,6 +15,19 @@ I always loved the Intel 386, and wondered why everyone abandoned it. The only r
 
 I found gray386linux a long time ago, but I couldn't mess with it because it kept on erroring out and I didn't have the expertise that I have now. Something that I have now is a much deeper understanding of what makes things tick, and I realized that Nix isn't actually needed to build, and I don't feel like installing something that I just need for 1 thing, when there's Makefiles, which have been tested time and time and time again without fail. This is basically my own version of gray386linux, but with personal improvements and ease of use.
 
+# Info
+
+<img width="500" alt="Monitor_1_20260515-150500-042" src="https://github.com/user-attachments/assets/263aba03-4cba-497e-ad9a-2b587d5397e7" />
+
+Thirty Two Bit is a linux distro I made that is based off of gray386linux by marmolak. Some things Thirty Two Bit has over gray386linux is
+ - Makefile buildsystem
+ - Updated busybox version
+ - Linux kernel compileable with GCC 15
+ - Bootable disk images
+  - Multiuser, bash, networking, init
+ - ttbfetch - fetch program
+ - Good documentation
+
 # Compiling
 
 Just `cd` into the `src` directory and type `make`. It will compile all the cross-compile dependancies into `cross`, while the actual i386 binaries will be in `root`.
