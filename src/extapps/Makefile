@@ -45,6 +45,26 @@ all:
 	@echo " "
 	@echo "========================="
 	@echo " "
+	
+	@echo "Building dropbear..."
+	@$(MAKE) dropbear > /dev/null 2>&1
+	@echo "Done building dropbear"
+
+	@echo " "
+	@echo "========================="
+	@echo " "
+
+	@echo "Building GNU ncurses..."
+	@$(MAKE) ncurses > /dev/null 2>&1
+	@echo "Done building GNU ncurses"
+
+	@echo " "
+	@echo "========================="
+	@echo " "
+
+	@echo "Building links..."
+	@$(MAKE) links > /dev/null 2>&1
+	@echo "Done building links"
 
 bash:
 	git clone git://git.sv.gnu.org/bash.git --depth=1
@@ -115,5 +135,13 @@ ncurses:
 	cd ncurses-6.6 && $(MAKE)
 	cd ncurses-6.6 && $(MAKE) install
 
+links:
+	cd ../tars && wget http://links.twibright.com/download/links-2.30.tar.gz
+	tar xzvf ../tars/links-2.30.tar.gz
+	cd links-2.30 && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS)" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" ./configure --build=i386-linux-musl --without-ipv6 --without-gpm --without-x --without-directfb --with-fb -without-zlib --without-brotoli --without-zstd --without-lzip --without-openmp --without-svgalib --without-pmshell --without-athenos --without-haiku --without-grx --without-freetype --without-libjpeg --without-libtif --without-librsvg --without-libwebp --without-libavifi --prefix="$(SYSROOT)/usr"
+	cd links-2.30 && $(MAKE)
+	cd links-2.30 && $(MAKE) install
+
+
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses*
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30*
