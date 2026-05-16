@@ -1,7 +1,9 @@
 CREDITS
 
- - vmunix: Porting build system over to Makefile and adding much more enhancements
+ - vmunix: Porting build system over to Makefile and adding much more enhancements. Also making coolmath, nixgames, and Bad Apple C89.
  - marmolak: Making the original gray386linux
  - w84death: Writing Floppinux and having good documentation for setting up booting on .img files.
  - musl.cc: Having cross-compiler so I could compile busybox
  - ChatGPT: Helping me set up multi-user mode and extlinux booting and making ttbfetch
+ - adriancable: Making 8086tiny
+ - Nico Nico Douga: Making original Bad Apple music video
