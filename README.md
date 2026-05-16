@@ -42,7 +42,6 @@ If you want to have some other programs, you can go to `extapps/` and type `make
   - Add binutils
  - Add Nano-X (I AM <ins>**NOT**</ins> DOING X11😭)
  - Add support for making floppinux target
- - Add ncurses
  - Add ALSA
  - Add links
    - Add directfb as well for graphics and gpm for mouse
