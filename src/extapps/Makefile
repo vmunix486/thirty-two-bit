@@ -108,6 +108,12 @@ dropbear:
 	cd dropbear && $(MAKE)
 	cd dropbear && $(MAKE) install
 
+ncurses:
+	cd ../tars && wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.6.tar.gz
+	tar xzvf ../tars/ncurses-6.6.tar.gz
+	cd ncurses-6.6 && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS)" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" ./configure --prefix="$(MUSLROOT)" --host=i386-linux-musl --without-shared --with-normal --without-debug --without-ada
+	cd ncurses-6.6 && $(MAKE)
+	cd ncurses-6.6 && $(MAKE) install
 
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses*
