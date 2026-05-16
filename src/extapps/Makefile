@@ -7,7 +7,7 @@ all:
 	@echo " "
 
 	@echo "Building coolmath..."
-	@$(MAKE) bash > /dev/null 2>&1
+	@$(MAKE) coolmath > /dev/null 2>&1
 	@echo "Done building coolmath"
 
 	@echo " "
@@ -39,8 +39,12 @@ all:
 	@echo " "
 
 	@echo "Building GNU Bash..."
-	@echo "It might fail to build, but that's to be expected"
 	@$(MAKE) bash > /dev/null 2>&1
+	@echo "Done building GNU Bash"
+	
+	@echo " "
+	@echo "========================="
+	@echo " "
 
 bash:
 	git clone git://git.sv.gnu.org/bash.git --depth=1
@@ -98,5 +102,12 @@ badapple:
 	sudo cp -v ASCII_bad_apple_c89/play-80x25.txt $(SYSROOT)/usr/badapple/play.txt
 	sudo chmod +x $(SYSROOT)/usr/badapple/run
 
+dropbear:
+	git clone https://github.com/mkj/dropbear --depth=1
+	cd dropbear && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS)" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" ./configure --enable-static --enable-bundled-libtom --disable-syslog --disable-harden --disable-zlib --disable-shadow --disable-utmp --disable-utmpx --disable-wtmpx --disable-loginfunc --prefix="$(SYSROOT)/usr"
+	cd dropbear && $(MAKE)
+	cd dropbear && $(MAKE) install
+
+
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/
