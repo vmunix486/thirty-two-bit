@@ -33,6 +33,8 @@ Thirty Two Bit is a linux distro I made that is based off of gray386linux by mar
 
 Just `cd` into the `src` directory and type `make`. It will compile all the cross-compile dependancies into `cross`, while the actual i386 binaries will be in `root`.
 
+If you want to have some other programs, you can go to `extapps/` and type `make` to compile all the extra programs, or do them piecemeal by perusing around the `Makefile`.
+
 # TODO
 
  - Add native C compiler (maybe something like chibicc or TCC)
