@@ -22,6 +22,7 @@ I found gray386linux a long time ago, but I couldn't mess with it because it kep
 Thirty Two Bit is a linux distro I made that is based off of gray386linux by marmolak. Some things Thirty Two Bit has over gray386linux is
  - Makefile buildsystem
  - Updated busybox version
+ - Updated dropbear version
  - Linux kernel compileable with GCC 15
  - Bootable disk images
   - Multiuser, bash, networking, init
