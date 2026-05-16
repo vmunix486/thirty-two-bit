@@ -46,7 +46,7 @@ If you want to have some other programs, you can go to `extapps/` and type `make
  - Add links
    - Add directfb as well for graphics and gpm for mouse
  - Add Rogue (I don't like nethack)
- - Add tiny386 and 8086tiny because why the heck not
+ - Add tiny386 because why the heck not
  - Add package manager for all this
 
 # Notes
