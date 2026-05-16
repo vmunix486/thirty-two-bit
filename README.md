@@ -41,8 +41,7 @@ If you want to have some other programs, you can go to `extapps/` and type `make
  - Add Nano-X (I AM <ins>**NOT**</ins> DOING X11😭)
  - Add support for making floppinux target
  - Add ALSA
- - Add links
-   - Add directfb as well for graphics and gpm for mouse
+ - Add links optional deps (directfb2, gpm, libjpeg, libpng, libtiff)
  - Add Rogue (I don't like nethack)
  - Add tiny386 because why the heck not
  - Add package manager for all this
