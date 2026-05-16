@@ -1,6 +1,4 @@
 #!/bin/sh
-# tinyfetch - minimal pfetch/neofetch-like system info script
-# BusyBox / POSIX sh compatible
 
 # Colors
 if [ "$TERM" != "dumb" ]; then
