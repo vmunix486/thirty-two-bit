@@ -1,4 +1,4 @@
 #PS1='\u@\H:\w\\$'
 PS1='\u@\H:\w > '
 
-PATH='/bin:/sbin:/usr/bin:/usr/sbin'
+PATH='/bin:/sbin:/usr/bin:/usr/sbin:/usr/games/bin'

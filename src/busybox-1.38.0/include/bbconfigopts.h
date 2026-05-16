@@ -73,7 +73,7 @@ static const char bbconfig_config[] ALIGN1 =
 "# CONFIG_DMALLOC is not set\n"
 "# CONFIG_EFENCE is not set\n"
 "# CONFIG_FEATURE_USE_BSS_TAIL is not set\n"
-"# CONFIG_FLOAT_DURATION is not set\n"
+"CONFIG_FLOAT_DURATION=y\n"
 "# CONFIG_FEATURE_RTMINMAX is not set\n"
 "# CONFIG_FEATURE_RTMINMAX_USE_LIBC_DEFINITIONS is not set\n"
 "CONFIG_FEATURE_BUFFERS_USE_MALLOC=y\n"
