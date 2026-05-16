@@ -27,6 +27,7 @@ Thirty Two Bit is a linux distro I made that is based off of gray386linux by mar
   - Multiuser, bash, networking, init
  - ttbfetch - fetch program
  - Good documentation
+ - More programs such as 8086tiny and Bad Apple
 
 # Compiling
 
