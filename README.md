@@ -38,8 +38,6 @@ If you want to have some other programs, you can go to `extapps/` and type `make
 
 # TODO
 
- - Add native C compiler (maybe something like chibicc or TCC)
-  - Add binutils
  - Add Nano-X (I AM <ins>**NOT**</ins> DOING X11😭)
  - Add support for making floppinux target
  - Add ALSA
