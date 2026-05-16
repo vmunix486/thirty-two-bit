@@ -118,11 +118,14 @@ musl-cross:
 	tar xvf tars/i486-linux-musl-cross.tar.xz
 
 kernel:
+	cp -v linconfig 386linux/.config
 	cd 386linux && $(MAKE) ARCH=i386 bzImage
 
 inst-kernel:
 	mkdir root/boot
-	cp 386linux/arch/x86/boot/bzImage root/boot/bzImage
+	cp -v 386linux/arch/x86/boot/bzImage root/boot/bzImage
+	cp -v 386linux/.config ./linconfig
+	cp -v 386linux/.config root/boot/config
 
 copy-etc:
 	cp -rv ttb/* root/
