@@ -562,7 +562,7 @@ CONFIG_BLK_DEV_RAM_SIZE=4096
 # CONFIG_BLK_DEV_XIP is not set
 # CONFIG_CDROM_PKTCDVD is not set
 # CONFIG_ATA_OVER_ETH is not set
-# CONFIG_BLK_DEV_HD is not set
+CONFIG_BLK_DEV_HD=y
 # CONFIG_BLK_DEV_RBD is not set
 
 #
@@ -659,7 +659,7 @@ CONFIG_ATA_BMDMA=y
 #
 # SATA SFF controllers with BMDMA
 #
-# CONFIG_ATA_PIIX is not set
+CONFIG_ATA_PIIX=y
 # CONFIG_SATA_HIGHBANK is not set
 # CONFIG_SATA_MV is not set
 # CONFIG_SATA_NV is not set
@@ -729,7 +729,7 @@ CONFIG_ATA_BMDMA=y
 #
 # Generic fallback / legacy drivers
 #
-# CONFIG_ATA_GENERIC is not set
+CONFIG_ATA_GENERIC=y
 CONFIG_PATA_LEGACY=y
 # CONFIG_MD is not set
 # CONFIG_TARGET_CORE is not set
