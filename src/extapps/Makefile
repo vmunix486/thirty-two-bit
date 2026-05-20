@@ -161,6 +161,11 @@ links:
 #	cp ../conf/nxconfig microwindows/src/config
 #	cd microwindows/src && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS)" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" $(MAKE)
 
+vim:
+	git clone https://github.com/vim/vim --depth=1
+	cd vim && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS) -L$(MUSLROOT)/lib -I$(MUSLROOT)/include/ncursesw -std=gnu99" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" ./configure --host=i486-linux-musl --prefix=$(SYSROOT)/usr --disable-gui --without-x --with-tlib=ncursesw --disable-nls --disable-acl --disable-selinux --disable-gpm --without-wayland vim_cv_getcwd_broken=no ac_cv_func_getcwd=yes
+	cd vim && $(MAKE)
+
 
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/
