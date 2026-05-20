@@ -86,9 +86,9 @@ rm -f /var/lock/*
 # Logging
 #
 
-#echo "Starting system logging..."
-#syslogd
-#klogd
+echo "Starting system logging..."
+syslogd -C64 > /dev/null 2>&1
+klogd > /dev/bull 2>&1
 
 #
 # Clock
