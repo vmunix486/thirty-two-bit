@@ -177,6 +177,16 @@ vim:
 	cd vim && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS) -L$(MUSLROOT)/lib -I$(MUSLROOT)/include/ncursesw -std=gnu99" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" ./configure --host=i486-linux-musl --prefix=$(SYSROOT)/usr --disable-gui --without-x --with-tlib=ncursesw --disable-nls --disable-acl --disable-selinux --disable-gpm --without-wayland vim_cv_getcwd_broken=no ac_cv_func_getcwd=yes
 	cd vim && $(MAKE)
 
+lua:
+	cd ../tars && wget https://www.lua.org/ftp/lua-5.4.8.tar.gz
+	tar xzvf ../tars/lua-5.4.8.tar.gz
+	cp -v ../conf/srcluamake lua-5.4.8/src/Makefile
+	cd lua-5.4.8 && $(MAKE)
+	cp -v lua-5.4.8/src/lua $(SYSROOT)/usr/bin
+	mkdir -p $(MUSLROOT)/include/lua
+	cp -v lua-5.4.8/src/*.h $(MUSLROOT)/include/lua
+	cp -v lua-5.4.8/src/*.a $(MUSLROOT)/lib
+	
 
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/
