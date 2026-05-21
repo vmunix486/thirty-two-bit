@@ -156,10 +156,21 @@ links:
 #	cd gpm-1.20.7 && $(MAKE)
 #	cd gpm-1.20.7 && $(MAKE) install
 
-#microwindows:
-#	git clone https://github.com/ghaerr/microwindows --depth=1
-#	cp ../conf/nxconfig microwindows/src/config
-#	cd microwindows/src && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS)" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" $(MAKE)
+microwindows:
+	git clone https://github.com/ghaerr/microwindows --depth=1
+	cp -v ../conf/nxconfig microwindows/src/config
+	cp -v ../conf/Makefile.rules microwindows/src/
+	cd microwindows/src && $(MAKE)
+	sudo mkdir -pv $(SYSROOT)/usr/microwindows $(SYSROOT)/usr/microwindows/bin
+	sudo cp -v microwindows/src/bin/nano-X $(SYSROOT)/usr/microwindows/bin
+	sudo cp -v microwindows/src/bin/nx* $(SYSROOT)/usr/microwindows/bin
+	sudo cp -v microwindows/src/bin/demo* $(SYSROOT)/usr/microwindows/bin
+	sudo cp -v microwindows/src/bin/screenshot-ppm $(SYSROOT)/usr/microwindows/bin
+	sudo cp -v microwindows/src/bin/show-font $(SYSROOT)/usr/microwindows/bin
+	sudo cp -v microwindows/src/bin/show-ppm $(SYSROOT)/usr/microwindows/bin
+	sudo mkdir -pv $(MUSLROOT)/include/microwindows
+	sudo cp -v microwindows/src/lib/* $(MUSLROOT)/lib
+	sudo cp -v microwindows/src/include/*.h $(MUSLROOT)/include/microwindows
 
 vim:
 	git clone https://github.com/vim/vim --depth=1
