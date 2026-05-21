@@ -78,8 +78,8 @@ COMMANDS
 
     [, [[, addgroup, adduser, arp, ash, awk, basename, blkid, cat, chgrp,
     chmod, chown, clear, comm, cp, crc32, cttyhack, cut, date, dd, delgroup,
-    deluser, df, dmesg, dos2unix, du, echo, env, false, fdisk, find, free,
-    fsck, ftpget, getfattr, getty, grep, halt, hdparm, head, hexedit,
+    deluser, df, dmesg, dos2unix, du, echo, env, false, fbset, fdisk, find,
+    free, fsck, ftpget, getfattr, getty, grep, halt, hdparm, head, hexedit,
     hostname, httpd, hwclock, ifconfig, ifdown, ifup, init, ip, ipaddr,
     iplink, iproute, kill, klogd, less, ln, login, losetup, ls, lsblk,
     makedevs, mdev, mkdir, mkdosfs, mkfifo, mkfs.vfat, mknod, mkswap,
@@ -410,6 +410,11 @@ COMMAND DESCRIPTIONS
             -, -i   Start with empty environment
             -0      NUL terminated output
             -u NAME Remove variable from environment
+
+  fbset
+    fbset [OPTIONS] [MODE]
+
+    Show and modify frame buffer settings
 
   fdisk
     fdisk [-uls] [-C CYLINDERS] [-H HEADS] [-S SECTORS] [-b SSZ] [-t

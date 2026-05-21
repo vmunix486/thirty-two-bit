@@ -147,7 +147,7 @@ Currently available applets include:
 \&\f(CW\*(C`[\*(C'\fR, \f(CW\*(C`[[\*(C'\fR, \f(CW\*(C`addgroup\*(C'\fR, \f(CW\*(C`adduser\*(C'\fR, \f(CW\*(C`arp\*(C'\fR, \f(CW\*(C`ash\*(C'\fR, \f(CW\*(C`awk\*(C'\fR, \f(CW\*(C`basename\*(C'\fR, \f(CW\*(C`blkid\*(C'\fR, \f(CW\*(C`cat\*(C'\fR,
 \&\f(CW\*(C`chgrp\*(C'\fR, \f(CW\*(C`chmod\*(C'\fR, \f(CW\*(C`chown\*(C'\fR, \f(CW\*(C`clear\*(C'\fR, \f(CW\*(C`comm\*(C'\fR, \f(CW\*(C`cp\*(C'\fR, \f(CW\*(C`crc32\*(C'\fR, \f(CW\*(C`cttyhack\*(C'\fR, \f(CW\*(C`cut\*(C'\fR, \f(CW\*(C`date\*(C'\fR,
 \&\f(CW\*(C`dd\*(C'\fR, \f(CW\*(C`delgroup\*(C'\fR, \f(CW\*(C`deluser\*(C'\fR, \f(CW\*(C`df\*(C'\fR, \f(CW\*(C`dmesg\*(C'\fR, \f(CW\*(C`dos2unix\*(C'\fR, \f(CW\*(C`du\*(C'\fR, \f(CW\*(C`echo\*(C'\fR, \f(CW\*(C`env\*(C'\fR, \f(CW\*(C`false\*(C'\fR,
-\&\f(CW\*(C`fdisk\*(C'\fR, \f(CW\*(C`find\*(C'\fR, \f(CW\*(C`free\*(C'\fR, \f(CW\*(C`fsck\*(C'\fR, \f(CW\*(C`ftpget\*(C'\fR, \f(CW\*(C`getfattr\*(C'\fR, \f(CW\*(C`getty\*(C'\fR, \f(CW\*(C`grep\*(C'\fR, \f(CW\*(C`halt\*(C'\fR,
+\&\f(CW\*(C`fbset\*(C'\fR, \f(CW\*(C`fdisk\*(C'\fR, \f(CW\*(C`find\*(C'\fR, \f(CW\*(C`free\*(C'\fR, \f(CW\*(C`fsck\*(C'\fR, \f(CW\*(C`ftpget\*(C'\fR, \f(CW\*(C`getfattr\*(C'\fR, \f(CW\*(C`getty\*(C'\fR, \f(CW\*(C`grep\*(C'\fR, \f(CW\*(C`halt\*(C'\fR,
 \&\f(CW\*(C`hdparm\*(C'\fR, \f(CW\*(C`head\*(C'\fR, \f(CW\*(C`hexedit\*(C'\fR, \f(CW\*(C`hostname\*(C'\fR, \f(CW\*(C`httpd\*(C'\fR, \f(CW\*(C`hwclock\*(C'\fR, \f(CW\*(C`ifconfig\*(C'\fR, \f(CW\*(C`ifdown\*(C'\fR,
 \&\f(CW\*(C`ifup\*(C'\fR, \f(CW\*(C`init\*(C'\fR, \f(CW\*(C`ip\*(C'\fR, \f(CW\*(C`ipaddr\*(C'\fR, \f(CW\*(C`iplink\*(C'\fR, \f(CW\*(C`iproute\*(C'\fR, \f(CW\*(C`kill\*(C'\fR, \f(CW\*(C`klogd\*(C'\fR, \f(CW\*(C`less\*(C'\fR, \f(CW\*(C`ln\*(C'\fR,
 \&\f(CW\*(C`login\*(C'\fR, \f(CW\*(C`losetup\*(C'\fR, \f(CW\*(C`ls\*(C'\fR, \f(CW\*(C`lsblk\*(C'\fR, \f(CW\*(C`makedevs\*(C'\fR, \f(CW\*(C`mdev\*(C'\fR, \f(CW\*(C`mkdir\*(C'\fR, \f(CW\*(C`mkdosfs\*(C'\fR, \f(CW\*(C`mkfifo\*(C'\fR,
@@ -524,6 +524,11 @@ Print current environment or run PROG after setting up environment
 \&        \-0      NUL terminated output
 \&        \-u NAME Remove variable from environment
 .Ve
+.SS fbset
+.IX Subsection "fbset"
+fbset [OPTIONS] [MODE]
+.PP
+Show and modify frame buffer settings
 .SS fdisk
 .IX Subsection "fdisk"
 fdisk [\-uls] [\-C CYLINDERS] [\-H HEADS] [\-S SECTORS] [\-b SSZ] [\-t PARTTYPE] DISK

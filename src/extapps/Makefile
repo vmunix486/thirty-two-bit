@@ -187,6 +187,5 @@ lua:
 	cp -v lua-5.4.8/src/*.h $(MUSLROOT)/include/lua
 	cp -v lua-5.4.8/src/*.a $(MUSLROOT)/lib
 	
-
 clean:
 	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/

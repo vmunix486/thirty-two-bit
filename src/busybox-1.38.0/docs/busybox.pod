@@ -84,7 +84,7 @@ Currently available applets include:
 C<[>, C<[[>, L<C<addgroup>|/"addgroup">, L<C<adduser>|/"adduser">, L<C<arp>|/"arp">, L<C<ash>|/"ash">, L<C<awk>|/"awk">, L<C<basename>|/"basename">, L<C<blkid>|/"blkid">, L<C<cat>|/"cat">,
 L<C<chgrp>|/"chgrp">, L<C<chmod>|/"chmod">, L<C<chown>|/"chown">, L<C<clear>|/"clear">, L<C<comm>|/"comm">, L<C<cp>|/"cp">, L<C<crc32>|/"crc32">, L<C<cttyhack>|/"cttyhack">, L<C<cut>|/"cut">, L<C<date>|/"date">,
 L<C<dd>|/"dd">, L<C<delgroup>|/"delgroup">, L<C<deluser>|/"deluser">, L<C<df>|/"df">, L<C<dmesg>|/"dmesg">, L<C<dos2unix>|/"dos2unix">, L<C<du>|/"du">, L<C<echo>|/"echo">, L<C<env>|/"env">, C<false>,
-L<C<fdisk>|/"fdisk">, L<C<find>|/"find">, L<C<free>|/"free">, L<C<fsck>|/"fsck">, L<C<ftpget>|/"ftpget">, L<C<getfattr>|/"getfattr">, L<C<getty>|/"getty">, L<C<grep>|/"grep">, L<C<halt>|/"halt">,
+L<C<fbset>|/"fbset">, L<C<fdisk>|/"fdisk">, L<C<find>|/"find">, L<C<free>|/"free">, L<C<fsck>|/"fsck">, L<C<ftpget>|/"ftpget">, L<C<getfattr>|/"getfattr">, L<C<getty>|/"getty">, L<C<grep>|/"grep">, L<C<halt>|/"halt">,
 L<C<hdparm>|/"hdparm">, L<C<head>|/"head">, L<C<hexedit>|/"hexedit">, L<C<hostname>|/"hostname">, L<C<httpd>|/"httpd">, L<C<hwclock>|/"hwclock">, L<C<ifconfig>|/"ifconfig">, L<C<ifdown>|/"ifdown">,
 L<C<ifup>|/"ifup">, L<C<init>|/"init">, L<C<ip>|/"ip">, L<C<ipaddr>|/"ipaddr">, L<C<iplink>|/"iplink">, L<C<iproute>|/"iproute">, L<C<kill>|/"kill">, L<C<klogd>|/"klogd">, L<C<less>|/"less">, L<C<ln>|/"ln">,
 L<C<login>|/"login">, L<C<losetup>|/"losetup">, L<C<ls>|/"ls">, L<C<lsblk>|/"lsblk">, L<C<makedevs>|/"makedevs">, L<C<mdev>|/"mdev">, L<C<mkdir>|/"mkdir">, L<C<mkdosfs>|/"mkdosfs">, L<C<mkfifo>|/"mkfifo">,
@@ -444,6 +444,12 @@ Print current environment or run PROG after setting up environment
 	-, -i	Start with empty environment
 	-0	NUL terminated output
 	-u NAME	Remove variable from environment
+
+=head2 fbset
+
+fbset [OPTIONS] [MODE]
+
+Show and modify frame buffer settings
 
 =head2 fdisk
 
