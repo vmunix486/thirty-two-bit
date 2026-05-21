@@ -39,11 +39,13 @@ If you want to have some other programs, you can go to `extapps/` and type `make
 # TODO
 
  - Add Nano-X (I AM <ins>**NOT**</ins> DOING X11😭)
+ - Add Nano-X optional deps (libfreetype, picture libraries)
  - Add support for making floppinux target
  - Add ALSA
- - Add links optional deps (directfb2, gpm, libjpeg, libpng, libtiff)
+ - Add links optional deps (svgalib, libjpeg, libpng, libtiff)
  - Add Rogue (I don't like nethack)
  - Add tiny386 because why the heck not
+ - Add Lua
  - Add package manager for all this
 
 # Notes
