@@ -44,7 +44,7 @@ If you want to have some other programs, you can go to `extapps/` and type `make
  - Add ALSA
  - Add links optional deps (svgalib, libjpeg, libpng, libtiff)
  - Add Rogue (I don't like nethack)
- - Add tiny386 because why the heck not
+ - Add tiny386, simh, and gxemul because why the heck not
  - Add Lua
  - Add package manager for all this
 
