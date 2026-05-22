@@ -226,6 +226,12 @@ brainfuck:
 	sudo mkdir -pv $(SYSROOT)/usr/src
 	sudo cp -v usr.src/*.bf $(SYSROOT)/usr/src
 
+php:
+	cd ../tars && wget https://www.php.net/distributions/php-8.2.30.tar.xz
+	tar xvf ../tars/php-8.2.30.tar.xz
+	cd php-8.2.30 && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS)" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" CXX=$(CXX) CXXFLAGS="$(CFLAGS) $(EXTCFLAGS)" ./configure --bindir=$(SYSROOT)/usr/bin --sbindir=$(SYSROOT)/usr/sbin --sysconfdir=$(SYSROOT)/etc --localstatedir=$(SYSROOT)/var --libdir=$(MUSLROOT)/lib --includedir=$(MUSLROOT)/include --host=i386-linux-musl --disable-ipv6 --without-zlib --without-sqlite3 --without-libxml --without-openssl --without-curl --enable-calendar --without-zip --with-gnu-ld --without-pic --disable-dom --disable-simplexml --disable-xml --without-expat --disable-xmlwriter --disable-xmlreader # Holy crap - vmunix
+	cd php-8.2.30 && $(MAKE)
+
 	
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/ fbbmp/ gxemul-0.7.0/ ../tars/gxemul* brainfuck-c/
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/ fbbmp/ gxemul-0.7.0/ ../tars/gxemul* brainfuck-c/ ../tars/php* php-8.2.30/
