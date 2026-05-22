@@ -186,6 +186,13 @@ lua:
 	mkdir -p $(MUSLROOT)/include/lua
 	cp -v lua-5.4.8/src/*.h $(MUSLROOT)/include/lua
 	cp -v lua-5.4.8/src/*.a $(MUSLROOT)/lib
+
+fbbmp:
+	git clone https://github.com/vmunix486/fbbmp --depth=1
+	cd fbbmp && $(CC) $(CFLAGS) $(EXTCFLAGS) -std=c89 fbbmp.c -o fbbmp $(LDFLAGS) $(EXTLDFLAGS)
+	sudo cp -v fbbmp/fbbmp $(SYSROOT)/usr/bin
+	sudo chmod +x $(SYSROOT)/usr/bin/fbbmp
+	sudo cp -v fbbmp/pix/*.bmp $(SYSROOT)/root
 	
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/ fbbmp/
