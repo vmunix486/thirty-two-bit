@@ -28,7 +28,7 @@ Thirty Two Bit is a linux distro I made that is based off of gray386linux by mar
   - Multiuser, bash, networking, init
  - ttbfetch - fetch program
  - Good documentation
- - More programs such as 8086tiny and Bad Apple
+ - More programs such as 8086tiny and lua
 
 # Compiling
 
@@ -42,6 +42,9 @@ If you want to have some other programs, you can go to `extapps/` and type `make
  - Add ALSA
  - Add Rogue (I don't like nethack)
  - Add tiny386, simh, and gxemul because why the heck not
+ - Add Dokuwiki
+  - Add PHP
+   - Add lighttpd if busybox httpd doesn't work
 
 # Notes
 

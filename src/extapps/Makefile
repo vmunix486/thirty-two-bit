@@ -186,6 +186,8 @@ lua:
 	mkdir -p $(MUSLROOT)/include/lua
 	cp -v lua-5.4.8/src/*.h $(MUSLROOT)/include/lua
 	cp -v lua-5.4.8/src/*.a $(MUSLROOT)/lib
+	sudo mkdir -p $(SYSROOT)/usr/src
+	sudo cp -v usr.src/*.lua $(SYSROOT)/usr/src
 
 fbbmp:
 	git clone https://github.com/vmunix486/fbbmp --depth=1
@@ -193,6 +195,21 @@ fbbmp:
 	sudo cp -v fbbmp/fbbmp $(SYSROOT)/usr/bin
 	sudo chmod +x $(SYSROOT)/usr/bin/fbbmp
 	sudo cp -v fbbmp/pix/*.bmp $(SYSROOT)/root
+
+#gxemul:
+#	cd ../tars && wget https://gavare.se/gxemul/src/gxemul-0.7.0.tar.gz
+#	tar xzvf ../tars/gxemul-0.7.0.tar.gz
+#	cd gxemul-0.7.0 && ./configure --disable-x
+#	cd gxemul-0.7.0 && CFLAGS="$(CFLAGS) $(EXTCFLAGS) -std=c99" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" $(MAKE)
+
+brainfuck:
+	git clone https://github.com/kgabis/brainfuck-c --depth=1
+	cd brainfuck-c && $(CC) $(CFLAGS) $(EXTCFLAGS) brainfuck.c -o bf $(LDFLAGS) $(EXTLDFLAGS)
+	sudo cp -v brainfuck-c/bf $(SYSROOT)/usr/bin
+	sudo chmod +x $(SYSROOT)/usr/bin/bf
+	sudo mkdir -pv $(SYSROOT)/usr/src
+	sudo cp -v usr.src/*.bf $(SYSROOT)/usr/src
+
 	
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/ fbbmp/
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/ fbbmp/ gxemul-0.7.0/ ../tars/gxemul* brainfuck-c/
