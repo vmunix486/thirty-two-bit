@@ -204,6 +204,7 @@ lua:
 	cp -v lua-5.4.8/src/*.a $(MUSLROOT)/lib
 	sudo mkdir -p $(SYSROOT)/usr/src
 	sudo cp -v usr.src/*.lua $(SYSROOT)/usr/src
+	sudo cp -v web/*.lua $(SYSROOT)/var/www/html/
 
 fbbmp:
 	git clone https://github.com/vmunix486/fbbmp --depth=1
@@ -227,11 +228,11 @@ brainfuck:
 	sudo cp -v usr.src/*.bf $(SYSROOT)/usr/src
 
 php:
-	cd ../tars && wget https://www.php.net/distributions/php-8.5.6.tar.xz
-	tar xvf ../tars/php-8.5.6.tar.xz
-	cd php-8.5.6 && CC=$(CC) CFLAGS="$(CFLAGS) $(EXTCFLAGS)" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS)" CXX=$(CXX) CXXFLAGS="$(CFLAGS) $(EXTCFLAGS)" ./configure --bindir=$(SYSROOT)/usr/bin --sbindir=$(SYSROOT)/usr/sbin --sysconfdir=$(SYSROOT)/etc --localstatedir=$(SYSROOT)/var --libdir=$(MUSLROOT)/lib --includedir=$(MUSLROOT)/include --host=i386-linux-musl --disable-ipv6 --without-zlib --without-sqlite3 --without-libxml --without-openssl --without-curl --enable-calendar --without-zip --with-gnu-ld --without-pic --disable-dom --disable-simplexml --disable-xml --without-expat --disable-xmlwriter --disable-xmlreader # Holy crap - vmunix
-	cd php-8.5.6 && $(MAKE)
+	cd ../tars && wget https://www.php.net/distributions/php-8.5.5.tar.xz
+	tar xvf ../tars/php-8.5.5.tar.xz
+	cd php-8.5.5 && HOSTCC=cc HOSTCXX=c++ CC=$(CC) CFLAGS="$(CFLAGS) -O3 -fno-pie -D_LARGEFILE64_SOURCE -latomic -lpthread -static-libgcc" LDFLAGS="$(LDFLAGS) $(EXTLDFLAGS) -static -static-libgcc" CXX=$(CXX) CXXFLAGS="$(CFLAGS) -O3 -fno-pie -static-libgcc" ./configure --bindir=$(SYSROOT)/usr/bin --sbindir=$(SYSROOT)/usr/sbin --sysconfdir=$(SYSROOT)/etc --localstatedir=$(SYSROOT)/var --libdir=$(MUSLROOT)/lib --includedir=$(MUSLROOT)/include --build=x86_64-linux-gnu --host=i386-linux-musl --disable-ipv6 --without-zlib --without-sqlite3 --without-libxml --without-openssl --without-curl --enable-calendar --without-zip --with-gnu-ld --without-pic --disable-dom --disable-simplexml --disable-xml --without-expat --disable-xmlwriter --disable-xmlreader --enable-json --enable-pcre --enable-session --without-pdo-sqlite --enable-embed=static # Holy crap - vmunix
+	cd php-8.5.5 && $(MAKE)
 
 	
 clean:
-	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/ fbbmp/ gxemul-0.7.0/ ../tars/gxemul* brainfuck-c/ ../tars/php* php-8.5.6/
+	rm -rfv bash/ syslinux/ coolmath/ nixgames/ 8086tiny/ ASCII_bad_apple_c89/ dropbear/ ncurses-6.6/ ../tars/ncurses* links-2.30/ ../tars/links-2.30* microwindows/ vim/ ../tars/lua* lua-5.4.8/ fbbmp/ gxemul-0.7.0/ ../tars/gxemul* brainfuck-c/ ../tars/php* php-8.5.5/

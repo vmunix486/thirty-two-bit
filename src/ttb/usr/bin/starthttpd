@@ -1,0 +1,23 @@
+#!/bin/sh
+
+HTTP_ROOT="/var/www/html"
+PIDFILE="/var/run/httpd.pid"
+PORT="80"
+
+# Create runtime dirs if needed
+mkdir -p /var/run
+
+# Kill old server if running
+if [ -f "$PIDFILE" ]; then
+    kill "$(cat "$PIDFILE")" 2>/dev/null
+    rm -f "$PIDFILE"
+fi
+
+# Start BusyBox httpd
+httpd \
+    -p "$PORT" \
+    -h "$HTTP_ROOT" \
+    -r "Minimal Linux Web Server"
+
+# Save PID
+echo $! > "$PIDFILE"
